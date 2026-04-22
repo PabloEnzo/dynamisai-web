@@ -60,6 +60,14 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <Link
+              href="/kron"
+              className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors duration-200 flex items-center gap-1"
+            >
+              🧠 KRON
+            </Link>
+          </li>
         </ul>
 
         {/* CTA */}
@@ -99,6 +107,13 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <Link
+            href="/kron"
+            onClick={() => setOpen(false)}
+            className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors flex items-center gap-1"
+          >
+            🧠 KRON
+          </Link>
           <a
             href={href("contacto")}
             onClick={() => setOpen(false)}

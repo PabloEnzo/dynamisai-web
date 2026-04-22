@@ -19,24 +19,6 @@ const projects = [
     href: "/meetingscribe",
     cta: "Ver detalles y precios →",
   },
-  {
-    name: "KRON",
-    tagline: "La IA que construimos desde cero",
-    description:
-      "KRON es el sistema de inteligencia artificial propio de DynamisAI: tres modelos PyTorch especializados (ASR, Summarizer, TaskExtractor) que trabajan en pipeline. Sin APIs externas, sin tokens de pago — todo corre en nuestros servidores.",
-    status: "I+D activo",
-    statusBadge: "blue",
-    tags: ["PyTorch", "ASR", "NLP", "IA propia", "~53M params"],
-    features: [
-      "ConformerASR — reconocimiento de voz propio",
-      "MeetingSummarizer — resúmenes Seq2Seq",
-      "TaskExtractor — extracción de tareas con NER",
-      "FastAPI REST + sistema de plugins extensible",
-    ],
-    emoji: "🧠",
-    href: "/kron",
-    cta: "Ver arquitectura y roadmap →",
-  },
 ];
 
 export default function Projects() {
@@ -74,17 +56,10 @@ export default function Projects() {
                       <div>
                         <div className="flex items-center gap-3 flex-wrap">
                           <h3 className="text-2xl font-bold text-[#0a1628]">{project.name}</h3>
-                          {project.statusBadge === "amber" ? (
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 border border-amber-200 text-amber-700">
-                              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                              {project.status}
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#eef5ff] border border-[#0055e0]/30 text-[#0055e0]">
-                              <span className="w-1.5 h-1.5 rounded-full bg-[#0055e0] animate-pulse" />
-                              {project.status}
-                            </span>
-                          )}
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 border border-amber-200 text-amber-700">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                            {project.status}
+                          </span>
                         </div>
                         <p className="text-[#4a6080] text-sm mt-0.5">{project.tagline}</p>
                       </div>
@@ -143,8 +118,8 @@ export default function Projects() {
           <div>
             <p className="text-[#0a1628] font-semibold text-sm">Más productos en camino</p>
             <p className="text-[#4a6080] text-sm">
-              KRON está diseñado para ser la base de múltiples productos. Cada nuevo producto de DynamisAI
-              se conectará al mismo motor de IA sin reinventar la rueda.
+              Estamos investigando y diseñando los próximos productos de DynamisAI.
+              Síguenos para enterarte cuando lancemos algo nuevo.
             </p>
           </div>
         </div>
