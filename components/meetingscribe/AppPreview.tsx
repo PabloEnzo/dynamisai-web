@@ -5,13 +5,13 @@ import { useState } from "react";
 const meetings = [
   { title: "Reunión de producto Q2", date: "Hoy, 10:00", duration: "52 min", tasks: "3/5 tareas", summary: "Se definieron las prioridades para el Q2: integración con Notion y mejora de precisión de transcripción." },
   { title: "Llamada con cliente — Acme", date: "Hoy, 12:30", duration: "28 min", tasks: "1/2 tareas", summary: "Revisión del progreso del proyecto. El cliente solicita demo la semana siguiente." },
-  { title: "Daily standup", date: "Ayer, 09:15", duration: "15 min", tasks: null, summary: "Bloqueos: integración API pendiente. Pablo trabaja en ello hoy." },
+  { title: "Daily standup", date: "Ayer, 09:15", duration: "15 min", tasks: null, summary: "Bloqueos: integración API pendiente. Juan trabaja en ello hoy." },
   { title: "Planning sprint 14", date: "Lun, 11:00", duration: "1h 20 min", tasks: "5/8 tareas", summary: "Se estimaron 12 historias de usuario. Capacidad del equipo: 34 puntos." },
 ];
 
 const tasks = [
   { text: "Entregar prototipo integración Notion", assignee: "Laura", done: true },
-  { text: "Revisar métricas de precisión de transcripción", assignee: "Pablo", done: false },
+  { text: "Revisar métricas de precisión de transcripción", assignee: "Juan", done: false },
   { text: "Preparar demo para cliente Acme", assignee: "Equipo", done: false },
 ];
 
@@ -49,10 +49,10 @@ function Sidebar({ active, setActive }: { active: string; setActive: (s: string)
       </nav>
       {/* User */}
       <div className="flex items-center gap-2 px-3 py-3 border-t border-[#e0e0e0]">
-        <div className="w-7 h-7 rounded-full bg-[#5b5fc7] flex items-center justify-center text-white text-[11px] font-bold shrink-0 shadow-sm">P</div>
+        <div className="w-7 h-7 rounded-full bg-[#5b5fc7] flex items-center justify-center text-white text-[11px] font-bold shrink-0 shadow-sm">J</div>
         <div className="flex-1 min-w-0">
-          <p className="text-[11.5px] font-bold text-[#242424] truncate">Pablo</p>
-          <p className="text-[10px] text-[#a0a0a0] truncate">pablo@dynamisai.es</p>
+          <p className="text-[11.5px] font-bold text-[#242424] truncate">Juan</p>
+          <p className="text-[10px] text-[#a0a0a0] truncate">juan@dynamisai.es</p>
         </div>
         <span className="text-[13px] text-[#a0a0a0] hover:text-red-500 cursor-pointer">⇥</span>
       </div>
@@ -66,7 +66,7 @@ function Dashboard({ setActive }: { setActive: (s: string) => void }) {
     <div className="flex-1 overflow-auto bg-[#f5f5f5] p-6 flex flex-col gap-5">
       {/* Header */}
       <div>
-        <h2 className="text-[18px] font-bold text-[#242424]">Hola, Pablo 👋</h2>
+        <h2 className="text-[18px] font-bold text-[#242424]">Hola, Juan 👋</h2>
         <p className="text-[13px] text-[#616161] mt-0.5">¿Listo para tu próxima reunión?</p>
       </div>
       {/* Stats */}
@@ -202,9 +202,9 @@ function History() {
         <div className="bg-white rounded-[12px] border border-[#e8e8e8] p-4">
           <p className="text-[10.5px] font-bold text-[#616161] uppercase tracking-wider mb-2.5">Transcripción</p>
           <p className="text-[11.5px] text-[#616161] leading-relaxed line-clamp-4">
-            Pablo: Necesitamos definir las prioridades para el Q2 antes de fin de mes.<br />
+            Juan: Necesitamos definir las prioridades para el Q2 antes de fin de mes.<br />
             Laura: Estoy de acuerdo. El foco debería estar en la integración con Notion y mejorar la precisión.<br />
-            Pablo: ¿Podemos tener un prototipo para la siguiente semana?<br />
+            Juan: ¿Podemos tener un prototipo para la siguiente semana?<br />
             Laura: Sí, el jueves deberíamos tener algo funcional para revisar...
           </p>
         </div>
