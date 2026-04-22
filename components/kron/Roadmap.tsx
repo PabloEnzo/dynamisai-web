@@ -94,7 +94,7 @@ export default function KronRoadmap() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-[23px] top-0 bottom-0 w-px bg-gradient-to-b from-[#059669] via-[#0055e0] to-[#e0eaf8] hidden md:block" />
+          <div className="absolute left-[23px] top-0 bottom-0 w-px bg-gradient-to-b from-[#059669] via-[#0055e0] to-[#e0eaf8] hidden md:block z-0" />
 
           <div className="flex flex-col gap-6">
             {phases.map((phase) => {
@@ -102,7 +102,7 @@ export default function KronRoadmap() {
               return (
                 <div key={phase.number} className="flex gap-6 items-start">
                   {/* Timeline dot */}
-                  <div className="hidden md:flex flex-col items-center shrink-0 mt-5">
+                  <div className="hidden md:flex flex-col items-center shrink-0 mt-5 relative z-10">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-bold shadow-sm border-2 border-white ${s.number}`}>
                       {phase.status === "done" ? "✓" : phase.number}
                     </div>
