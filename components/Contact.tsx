@@ -25,13 +25,13 @@ export default function Contact() {
               </p>
 
               <a
-                href="mailto:hola@dynamisai.es"
+                href="mailto:consulting@dynamisai.es"
                 className="inline-flex items-center gap-3 text-[#4a6080] hover:text-[#0055e0] transition-colors group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#eef5ff] border border-[#0055e0]/15 flex items-center justify-center text-lg group-hover:border-[#0055e0]/40 transition-colors">
                   ✉️
                 </div>
-                <span className="text-sm">hola@dynamisai.es</span>
+                <span className="text-sm">consulting@dynamisai.es</span>
               </a>
             </div>
 
