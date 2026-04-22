@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MeetingScribeHero from "@/components/meetingscribe/Hero";
+import AppPreview from "@/components/meetingscribe/AppPreview";
 import MeetingScribeFeatures from "@/components/meetingscribe/Features";
 import MeetingScribeHowItWorks from "@/components/meetingscribe/HowItWorks";
 import MeetingScribePricing from "@/components/meetingscribe/Pricing";
@@ -19,6 +20,7 @@ export default function MeetingScribePage() {
       <Navbar />
       <main>
         <MeetingScribeHero />
+        <AppPreview />
         <MeetingScribeFeatures />
         <MeetingScribeHowItWorks />
         <MeetingScribePricing />
