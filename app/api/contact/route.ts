@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: "DynamisAI Web <onboarding@resend.dev>",
+      from: "DynamisAI Web <consulting@dynamisai.es>",
       to: "consulting@dynamisai.es",
       replyTo: email,
       subject: `[Web] ${subject}`,
