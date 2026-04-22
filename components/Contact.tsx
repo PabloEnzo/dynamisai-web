@@ -1,6 +1,40 @@
 "use client";
+import { useState } from "react";
+
+type Status = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contacto" className="py-28 px-6 bg-[#f4f8ff]">
       <div className="max-w-6xl mx-auto">
@@ -37,36 +71,74 @@ export default function Contact() {
 
             {/* Right: form */}
             <div className="flex-1 w-full">
-              <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="flex flex-col sm:flex-row gap-4">
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#ecfdf5] border border-[#a7f3d0] flex items-center justify-center text-3xl">
+                    ✓
+                  </div>
+                  <p className="text-[#0a1628] font-bold text-xl">¡Mensaje enviado!</p>
+                  <p className="text-[#4a6080] text-sm max-w-xs">
+                    Hemos recibido tu mensaje. Te responderemos pronto en <strong>{email || "tu email"}</strong>.
+                  </p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    className="mt-2 text-sm text-[#0055e0] hover:underline"
+                  >
+                    Enviar otro mensaje
+                  </button>
+                </div>
+              ) : (
+                <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input
+                      type="text"
+                      placeholder="Tu nombre"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Tu email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
+                    />
+                  </div>
                   <input
                     type="text"
-                    placeholder="Tu nombre"
-                    className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
+                    placeholder="Asunto"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    required
+                    className="px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
                   />
-                  <input
-                    type="email"
-                    placeholder="Tu email"
-                    className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
+                  <textarea
+                    rows={4}
+                    placeholder="Cuéntanos tu idea o pregunta..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    className="px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors resize-none"
                   />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Asunto"
-                  className="px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors"
-                />
-                <textarea
-                  rows={4}
-                  placeholder="Cuéntanos tu idea o pregunta..."
-                  className="px-4 py-3 rounded-xl bg-white border border-[#e0eaf8] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0]/60 transition-colors resize-none"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3.5 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95"
-                >
-                  Enviar mensaje →
-                </button>
-              </form>
+
+                  {status === "error" && (
+                    <p className="text-sm text-red-500 bg-red-50 border border-red-200 rounded-xl px-4 py-2.5">
+                      Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo o escríbenos directamente.
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="px-6 py-3.5 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  >
+                    {status === "loading" ? "Enviando..." : "Enviar mensaje →"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
