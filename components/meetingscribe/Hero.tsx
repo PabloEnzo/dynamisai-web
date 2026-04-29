@@ -35,6 +35,12 @@ export default function MeetingScribeHero() {
             </div>
           </div>
 
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 rounded-3xl bg-[#eef5ff] border border-[#b8d0f0] flex items-center justify-center text-4xl shadow-sm">
+              🎙️
+            </div>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight text-[#0a1628]">
             Meeting<span className="gradient-text">Scribe</span>
           </h1>
