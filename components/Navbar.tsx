@@ -34,7 +34,6 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
             src="/logo-icon.png"
@@ -63,14 +62,13 @@ export default function Navbar() {
           <li>
             <Link
               href="/kron"
-              className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors duration-200 flex items-center gap-1"
+              className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors duration-200"
             >
-              🧠 KRON
+              KRON
             </Link>
           </li>
         </ul>
 
-        {/* CTA */}
         <a
           href={href("contacto")}
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0055e0] hover:bg-[#0044cc] text-white text-sm font-medium transition-colors duration-200"
@@ -78,7 +76,6 @@ export default function Navbar() {
           Hablemos
         </a>
 
-        {/* Mobile burger */}
         <button
           className="md:hidden text-[#4a6080] hover:text-[#0055e0]"
           onClick={() => setOpen(!open)}
@@ -94,7 +91,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-white border-t border-blue-100 px-6 py-4 flex flex-col gap-4 shadow-md">
           {links.map((l) => (
@@ -110,9 +106,9 @@ export default function Navbar() {
           <Link
             href="/kron"
             onClick={() => setOpen(false)}
-            className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors flex items-center gap-1"
+            className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors"
           >
-            🧠 KRON
+            KRON
           </Link>
           <a
             href={href("contacto")}

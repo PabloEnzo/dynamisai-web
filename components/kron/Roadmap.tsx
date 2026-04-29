@@ -76,31 +76,36 @@ const statusStyles: Record<string, { dot: string; badge: string; card: string; n
   },
 };
 
+import Reveal from "../Reveal";
+
 export default function KronRoadmap() {
   return (
     <section id="roadmap" className="py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-2xl mb-16">
-          <p className="text-[#0055e0] text-sm font-semibold uppercase tracking-widest mb-3">Roadmap</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
-            El camino que{" "}
-            <span className="gradient-text">estamos recorriendo</span>
-          </h2>
-          <p className="text-[#4a6080] text-lg leading-relaxed">
-            De la arquitectura al modelo entrenado, hasta el producto en manos de los usuarios.
-            Aquí está el plan completo, fase por fase.
-          </p>
-        </div>
+        <Reveal>
+          <div className="max-w-2xl mb-16">
+            <p className="text-[#0055e0] text-sm font-semibold uppercase tracking-widest mb-3">Roadmap</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
+              El camino que{" "}
+              <span className="gradient-text">estamos recorriendo</span>
+            </h2>
+            <p className="text-[#4a6080] text-lg leading-relaxed">
+              De la arquitectura al modelo entrenado, hasta el producto en manos de los usuarios.
+              Aquí está el plan completo, fase por fase.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-[23px] top-0 bottom-0 w-px bg-gradient-to-b from-[#059669] via-[#0055e0] to-[#e0eaf8] hidden md:block z-0" />
 
           <div className="flex flex-col gap-6">
-            {phases.map((phase) => {
+            {phases.map((phase, i) => {
               const s = statusStyles[phase.status];
               return (
-                <div key={phase.number} className="flex gap-6 items-start">
+                <Reveal key={phase.number} delay={i * 60}>
+                <div className="flex gap-6 items-start">
                   {/* Timeline dot */}
                   <div className="hidden md:flex flex-col items-center shrink-0 mt-5 relative z-10">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-bold shadow-sm border-2 border-white ${s.number}`}>
@@ -139,6 +144,7 @@ export default function KronRoadmap() {
                     </ul>
                   </div>
                 </div>
+                </Reveal>
               );
             })}
           </div>

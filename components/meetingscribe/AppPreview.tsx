@@ -21,7 +21,7 @@ function Sidebar({ active, setActive }: { active: string; setActive: (s: string)
     { id: "dashboard", icon: "⊞", label: "Inicio" },
     { id: "record", icon: "◉", label: "Grabar" },
     { id: "history", icon: "≡", label: "Historial" },
-    { id: "friends", icon: "👥", label: "Amigos" },
+    { id: "friends", icon: "·", label: "Amigos" },
     { id: "settings", icon: "⚙", label: "Ajustes" },
   ];
   return (
@@ -66,7 +66,7 @@ function Dashboard({ setActive }: { setActive: (s: string) => void }) {
     <div className="flex-1 overflow-auto bg-[#f5f5f5] p-6 flex flex-col gap-5">
       {/* Header */}
       <div>
-        <h2 className="text-[18px] font-bold text-[#242424]">Hola, Juan 👋</h2>
+        <h2 className="text-[18px] font-bold text-[#242424]">Hola, Juan</h2>
         <p className="text-[13px] text-[#616161] mt-0.5">¿Listo para tu próxima reunión?</p>
       </div>
       {/* Stats */}
@@ -170,7 +170,7 @@ function History() {
               ↓ Exportar
             </button>
             <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#10b981] text-[11.5px] text-[#10b981]">
-              🌐 Pública
+              Pública
             </button>
           </div>
         </div>
@@ -303,7 +303,6 @@ export default function AppPreview() {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="flex items-center gap-2 px-4 py-1 rounded-md bg-white border border-[#d0d0d0] text-[11px] text-[#616161] shadow-sm">
-                <span>🎙️</span>
                 <span className="font-medium">MeetingScribe — {screenLabel[active]}</span>
               </div>
             </div>
@@ -317,7 +316,7 @@ export default function AppPreview() {
             {active === "record" && <Recording />}
             {(active === "friends" || active === "settings") && (
               <div className="flex-1 bg-[#f5f5f5] flex items-center justify-center flex-col gap-3">
-                <span className="text-4xl">{active === "friends" ? "👥" : "⚙️"}</span>
+                <span className="text-4xl">{active === "friends" ? "—" : "—"}</span>
                 <p className="text-[#616161] text-sm font-medium">Sección {screenLabel[active]}</p>
                 <p className="text-[#a0a0a0] text-xs">Próximamente en la preview</p>
               </div>
