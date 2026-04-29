@@ -49,7 +49,7 @@ export default function Projects() {
                   <div className="flex flex-col md:flex-row md:items-start gap-8">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0055e0] to-[#00c8d8] shrink-0" />
+                        <div className="w-12 h-12 rounded-2xl bg-[#eef5ff] border border-[#b8d0f0] flex items-center justify-center text-2xl shrink-0">🎙️</div>
                         <div>
                           <div className="flex items-center gap-3 flex-wrap">
                             <h3 className="text-2xl font-bold text-[#0a1628]">{project.name}</h3>
@@ -109,7 +109,7 @@ export default function Projects() {
 
         <Reveal delay={100}>
           <div className="mt-6 rounded-2xl border border-dashed border-[#b0ccf0] p-6 flex items-center gap-4 bg-[#f8fbff]">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0055e0]/10 to-[#00c8d8]/10 border border-[#0055e0]/15 shrink-0" />
+            <div className="w-10 h-10 rounded-xl bg-[#eef5ff] border border-[#b8d0f0] flex items-center justify-center text-xl shrink-0">⏳</div>
             <div>
               <p className="text-[#0a1628] font-semibold text-sm">Más proyectos en camino</p>
               <p className="text-[#4a6080] text-sm">
