@@ -8,7 +8,14 @@ const projects = [
     description:
       "MeetingScribe es una aplicación de escritorio que transcribe, resume y extrae los puntos clave de tus reuniones automáticamente. Impulsada por modelos de IA propios, funciona sin enviar tus datos a ningún servidor externo.",
     status: "En desarrollo",
+    badgeClass: "bg-amber-50 border-amber-200 text-amber-700",
+    dotClass: "bg-amber-400",
     tags: ["IA local", "Desktop App", "Transcripción", "B2B"],
+    icon: "🎙️",
+    iconBg: "bg-[#eef5ff] border-[#b8d0f0]",
+    accentBar: "from-[#0055e0] to-[#00c8d8]",
+    ctaClass: "bg-[#0055e0] hover:bg-[#0044cc]",
+    checkClass: "text-[#0055e0]",
     features: [
       "Transcripción automática en tiempo real",
       "Resúmenes y puntos de acción con IA",
@@ -17,6 +24,29 @@ const projects = [
     ],
     href: "/meetingscribe",
     cta: "Ver detalles y precios →",
+  },
+  {
+    name: "FARO",
+    tagline: "Comunicaciones de emergencia que nunca fallan",
+    description:
+      "FARO es una plataforma open source de comunicaciones resilientes que combina malla LoRa de bajo coste con IA local de triaje. Sin internet, sin cobertura móvil, sin servidores externos. Para protección civil, municipios y ciudadanos.",
+    status: "Prototipo activo",
+    badgeClass: "bg-orange-50 border-orange-200 text-orange-700",
+    dotClass: "bg-orange-400",
+    tags: ["Open Source", "LoRa mesh", "IA local", "Emergencias", "NGI Zero"],
+    icon: "🔦",
+    iconBg: "bg-orange-50 border-orange-200",
+    accentBar: "from-[#ea580c] to-[#f97316]",
+    ctaClass: "bg-[#ea580c] hover:bg-[#c2410c]",
+    checkClass: "text-[#ea580c]",
+    features: [
+      "Malla LoRa multi-salto sin infraestructura",
+      "Triaje IA local ES/CA en < 1 ms",
+      "App ciudadana PWA offline-first",
+      "Panel de mando con mapa real del municipio",
+    ],
+    href: "/faro",
+    cta: "Ver FARO →",
   },
 ];
 
@@ -44,17 +74,19 @@ export default function Projects() {
           {projects.map((project) => (
             <Reveal key={project.name}>
               <div className="card-white rounded-3xl overflow-hidden hover:scale-[1.005] transition-transform duration-300">
-                <div className="h-1 w-full bg-gradient-to-r from-[#0055e0] to-[#00c8d8]" />
+                <div className={`h-1 w-full bg-gradient-to-r ${project.accentBar}`} />
                 <div className="p-8 md:p-10">
                   <div className="flex flex-col md:flex-row md:items-start gap-8">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#eef5ff] border border-[#b8d0f0] flex items-center justify-center text-2xl shrink-0">🎙️</div>
+                        <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center text-2xl shrink-0 ${project.iconBg}`}>
+                          {project.icon}
+                        </div>
                         <div>
                           <div className="flex items-center gap-3 flex-wrap">
                             <h3 className="text-2xl font-bold text-[#0a1628]">{project.name}</h3>
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 border border-amber-200 text-amber-700">
-                              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                            <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${project.badgeClass}`}>
+                              <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${project.dotClass}`} />
                               {project.status}
                             </span>
                           </div>
@@ -79,7 +111,7 @@ export default function Projects() {
 
                       <Link
                         href={project.href}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white text-sm font-semibold transition-all duration-200 hover:scale-[1.02]"
+                        className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-semibold transition-all duration-200 hover:scale-[1.02] ${project.ctaClass}`}
                       >
                         {project.cta}
                       </Link>
@@ -93,7 +125,7 @@ export default function Projects() {
                         <ul className="flex flex-col gap-3">
                           {project.features.map((f) => (
                             <li key={f} className="flex items-start gap-2.5 text-sm text-[#4a6080]">
-                              <span className="text-[#0055e0] mt-0.5 shrink-0 font-bold">✓</span>
+                              <span className={`mt-0.5 shrink-0 font-bold ${project.checkClass}`}>✓</span>
                               {f}
                             </li>
                           ))}
