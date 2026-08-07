@@ -67,14 +67,6 @@ export default function Navbar() {
               KRON
             </Link>
           </li>
-          <li>
-            <Link
-              href="/faro"
-              className="text-sm font-semibold text-[#ea580c] hover:text-[#c2410c] transition-colors duration-200"
-            >
-              FARO
-            </Link>
-          </li>
         </ul>
 
         <a
@@ -117,13 +109,6 @@ export default function Navbar() {
             className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors"
           >
             KRON
-          </Link>
-          <Link
-            href="/faro"
-            onClick={() => setOpen(false)}
-            className="text-sm font-semibold text-[#ea580c] hover:text-[#c2410c] transition-colors"
-          >
-            FARO
           </Link>
           <a
             href={href("contacto")}

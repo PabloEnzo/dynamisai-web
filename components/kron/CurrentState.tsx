@@ -48,7 +48,6 @@ export default function KronCurrentState() {
           <Reveal>
             <div className="card-white rounded-2xl p-7">
               <div className="flex items-center gap-2.5 mb-6">
-                <div className="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#059669] to-[#10b981]" />
                 <p className="font-bold text-[#0a1628]">Completado — Fase 0</p>
               </div>
               <ul className="flex flex-col gap-3">
@@ -65,7 +64,6 @@ export default function KronCurrentState() {
           <Reveal delay={100}>
             <div className="card-white rounded-2xl p-7">
               <div className="flex items-center gap-2.5 mb-6">
-                <div className="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#f0a830] to-[#fbbf24]" />
                 <p className="font-bold text-[#0a1628]">Próximas fases</p>
               </div>
               <ul className="flex flex-col gap-3">

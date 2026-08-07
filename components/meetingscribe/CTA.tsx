@@ -11,7 +11,6 @@ export default function MeetingScribeCTA() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#eef5ff]/60 via-transparent to-[#e0f7fb]/40 pointer-events-none" />
 
             <div className="relative z-10">
-              <div className="w-12 h-[3px] rounded-full bg-gradient-to-r from-[#0055e0] to-[#00c8d8] mx-auto mb-8" />
               <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-4 leading-tight">
                 Sé el primero en{" "}
                 <span className="gradient-text">probarlo</span>

@@ -11,7 +11,6 @@ export default function KronCTA() {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative z-10">
-              <div className="w-12 h-[3px] rounded-full bg-white/40 mx-auto mb-8" />
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-5 leading-tight">
                 ¿Quieres ver KRON en acción?
               </h2>

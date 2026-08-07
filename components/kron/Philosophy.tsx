@@ -41,7 +41,6 @@ export default function KronPhilosophy() {
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={i * 80}>
               <div className="card-white rounded-2xl p-7 group h-full">
-                <div className="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#0055e0] to-[#00c8d8] mb-5" />
                 <h3 className="text-[#0a1628] font-semibold text-base mb-2 group-hover:text-[#0055e0] transition-colors">
                   {r.title}
                 </h3>

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import FaroHero from "@/components/faro/Hero";
 import FaroProblem from "@/components/faro/Problem";
 import FaroHowItWorks from "@/components/faro/HowItWorks";
@@ -22,7 +24,9 @@ export const metadata: Metadata = {
 
 export default function FaroPage() {
   return (
-    <main>
+    <>
+      <Navbar />
+      <main>
       <FaroHero />
       <FaroProblem />
       <FaroHowItWorks />
@@ -30,6 +34,8 @@ export default function FaroPage() {
       <FaroCurrentState />
       <FaroRoadmap />
       <FaroCTA />
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

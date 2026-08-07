@@ -17,8 +17,6 @@ export default function FaroCTA() {
             />
 
             <div className="relative z-10 p-10 md:p-16 text-center">
-              <div className="w-14 h-1 rounded-full bg-gradient-to-r from-[#ea580c] to-[#f97316] mx-auto mb-8" />
-
               <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
                 Hagamos que FARO{" "}
                 <span style={{ background: "linear-gradient(135deg, #ea580c, #f97316, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
