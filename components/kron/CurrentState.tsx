@@ -19,16 +19,16 @@ const completedPhase1 = [
   "KronTokenizer entrenado (vocab 8k, FLEURS ES + MLS ES + LibriSpeech EN)",
   "Datasets de audio descargados y preparados para ASR",
   "Validación de calidad de datos completada",
+  "ConformerASR entrenado — 100k steps, val loss 1.23",
+  "Evaluación WER: 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%",
+  "Integración live MeetingScribe — endpoint + webm + auth verificado",
 ];
 
 const pending = [
-  "Entrenamiento del modelo ASR (~30M params) en GPU",
-  "Validación y evaluación WER del ASR",
   "Preparación corpus de reuniones para el Summarizer",
   "Entrenamiento del MeetingSummarizer",
   "Entrenamiento del TaskExtractor",
-  "Integración live con MeetingScribe desktop",
-  "Pruebas end-to-end del pipeline completo",
+  "Pruebas end-to-end del pipeline completo (ASR → resumen → tareas)",
 ];
 
 export default function KronCurrentState() {
@@ -39,11 +39,11 @@ export default function KronCurrentState() {
           <div className="max-w-2xl mb-16">
             <p className="text-[#0055e0] text-sm font-semibold uppercase tracking-widest mb-3">Estado actual</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
-              Fases 0 y 1{" "}
-              <span className="gradient-text">completadas</span>
+              ASR entrenado,{" "}
+              <span className="gradient-text">integración live</span>
             </h2>
             <p className="text-[#4a6080] text-lg leading-relaxed">
-              Arquitectura completa en código y datos preparados. Ahora empieza el entrenamiento del ASR en GPU.
+              El modelo de transcripción funciona en producción. MeetingScribe ya graba y transcribe en tiempo real con KRON. El siguiente paso es el Summarizer.
             </p>
           </div>
         </Reveal>
@@ -69,7 +69,7 @@ export default function KronCurrentState() {
           <Reveal delay={80}>
             <div className="card-white rounded-2xl p-7 h-full border-[#0055e0]/20">
               <div className="flex items-center justify-between mb-5">
-                <p className="font-bold text-[#0a1628]">Fase 1 — Datos</p>
+                <p className="font-bold text-[#0a1628]">Fases 1-2 — Datos + ASR</p>
                 <span className="text-xs font-semibold text-[#059669] bg-[#ecfdf5] border border-[#a7f3d0] px-2.5 py-1 rounded-full">Completado</span>
               </div>
               <ul className="flex flex-col gap-3">
@@ -105,12 +105,12 @@ export default function KronCurrentState() {
           <div className="mt-10 card-white rounded-2xl p-7">
             <div className="flex items-center justify-between mb-3">
               <p className="text-sm font-semibold text-[#0a1628]">Progreso global del proyecto</p>
-              <span className="text-sm font-bold text-[#0055e0]">~40%</span>
+              <span className="text-sm font-bold text-[#0055e0]">~45%</span>
             </div>
             <div className="w-full h-2.5 bg-[#e0eaf8] rounded-full overflow-hidden">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-[#0055e0] to-[#00c8d8]"
-                style={{ width: "40%" }}
+                style={{ width: "45%" }}
               />
             </div>
             <div className="flex justify-between mt-2">
