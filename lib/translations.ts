@@ -10,7 +10,7 @@ export const t = {
     hero: {
       title: ["Software que ", "piensa", " contigo"] as [string, string, string],
       description:
-        "En DynamisAI construimos productos de software donde la inteligencia artificial no es un añadido — es el núcleo. Cada línea de código diseñada para potenciar lo que las personas hacen mejor.",
+        "En DynamisAI construimos productos de software donde la inteligencia artificial no es un añadido: es el núcleo. Cada línea de código diseñada para potenciar lo que las personas hacen mejor.",
       viewProjects: "Ver proyectos",
       learnMore: "Conocer más →",
       tags: ["IA integrada", "Alto rendimiento", "Privacidad primero", "Escalable"],
@@ -853,7 +853,7 @@ export const t = {
     hero: {
       title: ["Software that ", "thinks", " with you"] as [string, string, string],
       description:
-        "At DynamisAI we build software products where artificial intelligence is not an add-on — it's the core. Every line of code designed to amplify what people do best.",
+        "At DynamisAI we build software products where artificial intelligence is not an add-on: it's the core. Every line of code designed to amplify what people do best.",
       viewProjects: "View projects",
       learnMore: "Learn more →",
       tags: ["Integrated AI", "High performance", "Privacy first", "Scalable"],
