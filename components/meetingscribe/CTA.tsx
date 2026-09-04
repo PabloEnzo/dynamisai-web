@@ -12,7 +12,7 @@ export default function MeetingScribeCTA() {
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <div className="card-white rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-[#0055e0]/40 to-transparent" />
+
             <div className="absolute inset-0 bg-gradient-to-br from-[#eef5ff]/60 via-transparent to-[#e0f7fb]/40 pointer-events-none" />
 
             <div className="relative z-10">

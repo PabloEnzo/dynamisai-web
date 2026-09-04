@@ -59,7 +59,7 @@ export default function Projects() {
             return (
               <Reveal key={style.key}>
                 <div className="card-white rounded-3xl overflow-hidden hover:scale-[1.005] transition-transform duration-300">
-                  <div className={`h-1 w-full bg-gradient-to-r ${style.accentBar}`} />
+
                   <div className="p-8 md:p-10">
                     <div className="flex flex-col md:flex-row md:items-start gap-8">
                       <div className="flex-1">

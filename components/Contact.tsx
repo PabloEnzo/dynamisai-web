@@ -43,8 +43,7 @@ export default function Contact() {
     <section id="contacto" className="py-28 px-6 bg-[#f4f8ff]">
       <div className="max-w-6xl mx-auto">
         <div className="card-white rounded-3xl p-10 md:p-16 relative overflow-hidden">
-          {/* Decorative top line */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-[#0055e0]/40 to-transparent" />
+
 
           <div className="relative flex flex-col md:flex-row gap-12 items-start">
             {/* Left */}
