@@ -1,7 +1,13 @@
+"use client";
 import Link from "next/link";
 import Reveal from "../Reveal";
+import { useLang } from "@/contexts/LangContext";
+import { t } from "@/lib/translations";
 
 export default function FaroCTA() {
+  const { lang } = useLang();
+  const tx = t[lang].faro.cta;
+
   return (
     <section id="contacto" className="py-28 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
@@ -18,15 +24,14 @@ export default function FaroCTA() {
 
             <div className="relative z-10 p-10 md:p-16 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
-                Hagamos que FARO{" "}
+                {tx.title[0]}
                 <span style={{ background: "linear-gradient(135deg, #ea580c, #f97316, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                  llegue al terreno
+                  {tx.title[1]}
                 </span>
               </h2>
 
               <p className="text-[#4a6080] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-                Si representas un municipio, eres voluntario de protección civil,
-                investigador o simplemente quieres apoyar el proyecto — queremos conocerte.
+                {tx.description}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -34,18 +39,18 @@ export default function FaroCTA() {
                   href="/#contacto"
                   className="px-8 py-3.5 rounded-xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-semibold text-sm transition-all duration-200 hover:scale-105"
                 >
-                  Contactar con el equipo →
+                  {tx.cta1}
                 </Link>
                 <Link
                   href="/kron"
                   className="px-8 py-3.5 rounded-xl border border-[#0055e0]/30 hover:border-[#0055e0] text-[#0055e0] font-semibold text-sm transition-all duration-200 hover:bg-[#eef5ff]"
                 >
-                  Conocer la IA detrás: KRON
+                  {tx.cta2}
                 </Link>
               </div>
 
               <p className="text-sm text-[#8a9ab5]">
-                FARO es open source · Licencia AGPL-3.0 · Desarrollado bajo DynamisAI
+                {tx.footer}
               </p>
             </div>
           </div>

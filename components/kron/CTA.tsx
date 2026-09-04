@@ -1,7 +1,13 @@
+"use client";
 import Link from "next/link";
 import Reveal from "../Reveal";
+import { useLang } from "@/contexts/LangContext";
+import { t } from "@/lib/translations";
 
 export default function KronCTA() {
+  const { lang } = useLang();
+  const tx = t[lang].kron.cta;
+
   return (
     <section className="py-28 px-6 bg-[#f4f8ff]">
       <div className="max-w-4xl mx-auto text-center">
@@ -12,11 +18,10 @@ export default function KronCTA() {
 
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-5 leading-tight">
-                ¿Quieres ver KRON en acción?
+                {tx.title}
               </h2>
               <p className="text-white/75 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                KRON impulsa MeetingScribe. Cuando el producto esté listo,
-                podrás probarlo en primera persona — con IA 100% propia, sin enviar tus datos a ningún servidor externo.
+                {tx.description}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -24,13 +29,13 @@ export default function KronCTA() {
                   href="/meetingscribe"
                   className="px-8 py-3.5 rounded-xl bg-white text-[#0055e0] font-semibold text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg"
                 >
-                  Ver MeetingScribe →
+                  {tx.cta1}
                 </Link>
                 <a
                   href="/#contacto"
                   className="px-8 py-3.5 rounded-xl border border-white/30 hover:border-white/60 text-white font-semibold text-sm transition-all duration-200 hover:bg-white/10"
                 >
-                  Contactar con nosotros
+                  {tx.cta2}
                 </a>
               </div>
             </div>

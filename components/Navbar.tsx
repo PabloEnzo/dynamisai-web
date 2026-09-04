@@ -3,19 +3,23 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-
-const links = [
-  { label: "Inicio", anchor: "inicio" },
-  { label: "Nosotros", anchor: "nosotros" },
-  { label: "Proyectos", anchor: "proyectos" },
-  { label: "Contacto", anchor: "contacto" },
-];
+import { useLang } from "@/contexts/LangContext";
+import { t } from "@/lib/translations";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const { lang, setLang } = useLang();
+  const tx = t[lang].nav;
+
+  const links = [
+    { label: tx.home, anchor: "inicio" },
+    { label: tx.about, anchor: "nosotros" },
+    { label: tx.projects, anchor: "proyectos" },
+    { label: tx.contact, anchor: "contacto" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -69,12 +73,20 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <a
-          href={href("contacto")}
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0055e0] hover:bg-[#0044cc] text-white text-sm font-medium transition-colors duration-200"
-        >
-          Hablemos
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => setLang(lang === "es" ? "en" : "es")}
+            className="text-sm font-medium text-[#4a6080] hover:text-[#0055e0] transition-colors border border-[#e0eaf8] rounded-lg px-3 py-1.5"
+          >
+            {lang === "es" ? "EN" : "ES"}
+          </button>
+          <a
+            href={href("contacto")}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0055e0] hover:bg-[#0044cc] text-white text-sm font-medium transition-colors duration-200"
+          >
+            {tx.talkToUs}
+          </a>
+        </div>
 
         <button
           className="md:hidden text-[#4a6080] hover:text-[#0055e0]"
@@ -110,12 +122,18 @@ export default function Navbar() {
           >
             KRON
           </Link>
+          <button
+            onClick={() => { setLang(lang === "es" ? "en" : "es"); setOpen(false); }}
+            className="text-sm font-medium text-[#4a6080] hover:text-[#0055e0] transition-colors border border-[#e0eaf8] rounded-lg px-3 py-1.5 text-left w-fit"
+          >
+            {lang === "es" ? "EN" : "ES"}
+          </button>
           <a
             href={href("contacto")}
             onClick={() => setOpen(false)}
             className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#0055e0] hover:bg-[#0044cc] text-white text-sm font-medium transition-colors"
           >
-            Hablemos
+            {tx.talkToUs}
           </a>
         </div>
       )}

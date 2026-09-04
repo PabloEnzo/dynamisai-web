@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { useLang } from "@/contexts/LangContext";
+import { t } from "@/lib/translations";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -9,6 +11,8 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const { lang } = useLang();
+  const tx = t[lang].contact;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -46,16 +50,14 @@ export default function Contact() {
             {/* Left */}
             <div className="flex-1">
               <p className="text-[#0055e0] text-sm font-semibold uppercase tracking-widest mb-3">
-                Contacto
+                {tx.eyebrow}
               </p>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] mb-5 leading-tight">
-                ¿Tienes una idea?{" "}
-                <span className="gradient-text">Hablemos.</span>
+                {tx.title[0]}
+                <span className="gradient-text">{tx.title[1]}</span>
               </h2>
               <p className="text-[#4a6080] text-lg leading-relaxed mb-8">
-                Si tienes un proyecto en mente, quieres saber más sobre MeetingScribe
-                o simplemente quieres estar al tanto de lo que hacemos, escríbenos.
-                Respondemos rápido.
+                {tx.description}
               </p>
 
               <a
@@ -76,15 +78,16 @@ export default function Contact() {
                   <div className="w-16 h-16 rounded-full bg-[#ecfdf5] border border-[#a7f3d0] flex items-center justify-center text-3xl">
                     ✓
                   </div>
-                  <p className="text-[#0a1628] font-bold text-xl">¡Mensaje enviado!</p>
+                  <p className="text-[#0a1628] font-bold text-xl">{tx.success.title}</p>
                   <p className="text-[#4a6080] text-sm max-w-xs">
-                    Hemos recibido tu mensaje. Te responderemos pronto en <strong>{email || "tu email"}</strong>.
+                    {tx.success.desc}{" "}
+                    <strong>{email || tx.success.yourEmail}</strong>.
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
                     className="mt-2 text-sm text-[#0055e0] hover:underline"
                   >
-                    Enviar otro mensaje
+                    {tx.success.another}
                   </button>
                 </div>
               ) : (
@@ -92,7 +95,7 @@ export default function Contact() {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <input
                       type="text"
-                      placeholder="Tu nombre"
+                      placeholder={tx.form.name}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
@@ -100,7 +103,7 @@ export default function Contact() {
                     />
                     <input
                       type="email"
-                      placeholder="Tu email"
+                      placeholder={tx.form.email}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -109,7 +112,7 @@ export default function Contact() {
                   </div>
                   <input
                     type="text"
-                    placeholder="Asunto"
+                    placeholder={tx.form.subject}
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     required
@@ -117,7 +120,7 @@ export default function Contact() {
                   />
                   <textarea
                     rows={4}
-                    placeholder="Cuéntanos tu idea o pregunta..."
+                    placeholder={tx.form.message}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
@@ -126,7 +129,7 @@ export default function Contact() {
 
                   {status === "error" && (
                     <p className="text-sm text-red-500 bg-red-50 border border-red-200 rounded-xl px-4 py-2.5">
-                      Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo o escríbenos directamente.
+                      {tx.error}
                     </p>
                   )}
 
@@ -135,7 +138,7 @@ export default function Contact() {
                     disabled={status === "loading"}
                     className="px-6 py-3.5 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    {status === "loading" ? "Enviando..." : "Enviar mensaje →"}
+                    {status === "loading" ? tx.form.sending : tx.form.send}
                   </button>
                 </form>
               )}
