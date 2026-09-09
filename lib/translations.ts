@@ -204,9 +204,9 @@ export const t = {
       },
       currentState: {
         eyebrow: "Estado actual",
-        title: ["ASR entrenado, ", "integración live"] as [string, string],
+        title: ["Pipeline completo ", "funcionando"] as [string, string],
         description:
-          "El modelo de transcripción funciona en producción. MeetingScribe ya graba y transcribe en tiempo real con KRON. El siguiente paso es el Summarizer.",
+          "Los tres modelos de KRON funcionan en cadena: MeetingScribe graba, transcribe, resume y extrae tareas en tiempo real, 100% en local. La integración está terminada; ahora empieza la evolución multi-producto.",
         phase0: {
           label: "Fase 0 — Fundamentos",
           status: "Completado",
@@ -238,21 +238,22 @@ export const t = {
           ],
         },
         next: {
-          label: "Próximas fases",
-          status: "En curso",
+          label: "Fases 3-4 — NLP + Integración",
+          status: "Completado",
           items: [
-            "Preparación corpus de reuniones para el Summarizer",
-            "Entrenamiento del MeetingSummarizer",
-            "Entrenamiento del TaskExtractor",
-            "Pruebas end-to-end del pipeline completo (ASR → resumen → tareas)",
+            "MeetingSummarizer entrenado (48M params)",
+            "Resumen extractivo fiable — sin alucinaciones",
+            "TaskExtractor entrenado — persona / tarea / fecha",
+            "Pipeline completo integrado en MeetingScribe",
+            "Docker listo para despliegue en servidor propio",
           ],
         },
         progress: {
           label: "Progreso global del proyecto",
           arch: "Arquitectura ✓",
           data: "Datos ✓",
-          training: "Entrenamiento",
-          integration: "Integración",
+          training: "Entrenamiento ✓",
+          integration: "Integración ✓",
         },
       },
       roadmap: {
@@ -303,7 +304,7 @@ export const t = {
           {
             number: "3",
             title: "Entrenamiento NLP",
-            statusLabel: "En curso",
+            statusLabel: "Completado",
             desc: "Entrenamiento del MeetingSummarizer (~15M params) y TaskExtractor (~8M params) sobre corpus anotado de reuniones. Validación de calidad de resúmenes y precisión de extracción.",
             items: [
               "MeetingSummarizer Seq2Seq entrenado",
@@ -315,7 +316,7 @@ export const t = {
           {
             number: "4",
             title: "Integración & Producción",
-            statusLabel: "Próximamente",
+            statusLabel: "Completado",
             desc: "Integración live del pipeline KRON con MeetingScribe desktop. Tests end-to-end, optimización de latencia, Docker para despliegue y monitorización en producción.",
             items: [
               "Pipeline live ASR → Resumen → Tareas",
@@ -1047,9 +1048,9 @@ export const t = {
       },
       currentState: {
         eyebrow: "Current state",
-        title: ["ASR trained, ", "live integration"] as [string, string],
+        title: ["Full pipeline ", "up and running"] as [string, string],
         description:
-          "The transcription model is running in production. MeetingScribe already records and transcribes in real time with KRON. The next step is the Summarizer.",
+          "KRON's three models work in a chain: MeetingScribe records, transcribes, summarizes and extracts tasks in real time, 100% locally. Integration is done; now the multi-product evolution begins.",
         phase0: {
           label: "Phase 0 — Foundations",
           status: "Completed",
@@ -1081,21 +1082,22 @@ export const t = {
           ],
         },
         next: {
-          label: "Next phases",
-          status: "In progress",
+          label: "Phases 3-4 — NLP + Integration",
+          status: "Completed",
           items: [
-            "Preparing meeting corpus for Summarizer",
-            "Training MeetingSummarizer",
-            "Training TaskExtractor",
-            "End-to-end testing of full pipeline (ASR → summary → tasks)",
+            "MeetingSummarizer trained (48M params)",
+            "Reliable extractive summary — no hallucinations",
+            "TaskExtractor trained — person / task / date",
+            "Full pipeline integrated into MeetingScribe",
+            "Docker ready for self-hosted deployment",
           ],
         },
         progress: {
           label: "Overall project progress",
           arch: "Architecture ✓",
           data: "Data ✓",
-          training: "Training",
-          integration: "Integration",
+          training: "Training ✓",
+          integration: "Integration ✓",
         },
       },
       roadmap: {
@@ -1146,7 +1148,7 @@ export const t = {
           {
             number: "3",
             title: "NLP Training",
-            statusLabel: "In progress",
+            statusLabel: "Completed",
             desc: "Training MeetingSummarizer (~15M params) and TaskExtractor (~8M params) on annotated meeting corpus. Quality validation of summaries and extraction accuracy.",
             items: [
               "MeetingSummarizer Seq2Seq trained",
@@ -1158,7 +1160,7 @@ export const t = {
           {
             number: "4",
             title: "Integration & Production",
-            statusLabel: "Coming soon",
+            statusLabel: "Completed",
             desc: "Live integration of KRON pipeline with MeetingScribe desktop. End-to-end tests, latency optimization, Docker for deployment and production monitoring.",
             items: [
               "Live pipeline ASR → Summary → Tasks",

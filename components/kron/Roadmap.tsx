@@ -30,7 +30,7 @@ const statusStyles: Record<string, { dot: string; badge: string; card: string; n
   },
 };
 
-const phaseStatuses = ["done", "done", "done", "current", "upcoming", "future"];
+const phaseStatuses = ["done", "done", "done", "done", "done", "future"];
 
 export default function KronRoadmap() {
   const { lang } = useLang();
