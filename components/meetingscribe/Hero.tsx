@@ -41,12 +41,6 @@ export default function MeetingScribeHero() {
             </div>
           </div>
 
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 rounded-3xl bg-[#eef5ff] border border-[#b8d0f0] flex items-center justify-center shadow-sm p-4">
-              <img src="/logo-waive.png" alt="Waive" className="w-full h-full object-contain" />
-            </div>
-          </div>
-
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight text-[#0a1628]">
             <span className="gradient-text">Waive</span>
           </h1>
