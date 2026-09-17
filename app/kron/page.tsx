@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "KRON — La IA propia de DynamisAI",
   description:
-    "KRON es el sistema de inteligencia artificial construido desde cero en PyTorch por DynamisAI. Sin APIs externas, sin dependencias de terceros. El cerebro detrás de MeetingScribe y todos los futuros productos.",
+    "KRON es el sistema de inteligencia artificial construido desde cero en PyTorch por DynamisAI. Sin APIs externas, sin dependencias de terceros. El cerebro detrás de Waive y todos los futuros productos.",
 };
 
 export default function KronPage() {

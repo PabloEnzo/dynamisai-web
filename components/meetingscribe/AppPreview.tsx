@@ -11,7 +11,7 @@ function Sidebar({ active, setActive, tx }: { active: string; setActive: (s: str
     <div className="w-[200px] shrink-0 flex flex-col h-full bg-[#f3f2f1] border-r border-[#e0e0e0]">
       {/* Logo */}
       <div className="px-4 py-3.5 border-b border-[#e0e0e0]">
-        <span className="text-[13px] font-bold text-[#242424] tracking-tight">MeetingScribe</span>
+        <span className="text-[13px] font-bold text-[#242424] tracking-tight">Waive</span>
       </div>
       {/* Nav */}
       <nav className="flex-1 p-2.5 flex flex-col gap-0.5">
@@ -283,7 +283,7 @@ export default function AppPreview() {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="flex items-center gap-2 px-4 py-1 rounded-md bg-white border border-[#d0d0d0] text-[11px] text-[#616161] shadow-sm">
-                <span className="font-medium">MeetingScribe — {screenLabel[active]}</span>
+                <span className="font-medium">Waive — {screenLabel[active]}</span>
               </div>
             </div>
           </div>

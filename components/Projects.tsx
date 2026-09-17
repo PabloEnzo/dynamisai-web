@@ -10,7 +10,7 @@ const projectStyles = [
     badgeClass: "bg-amber-50 border-amber-200 text-amber-700",
     dotClass: "bg-amber-400",
     tags: ["IA local", "Desktop App", "Transcripción", "B2B"],
-    icon: "🎙️",
+    icon: null,
     iconBg: "bg-[#eef5ff] border-[#b8d0f0]",
     accentBar: "from-[#0055e0] to-[#00c8d8]",
     ctaClass: "bg-[#0055e0] hover:bg-[#0044cc]",
@@ -65,12 +65,14 @@ export default function Projects() {
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center text-2xl shrink-0 ${style.iconBg}`}>
-                            {style.icon}
+                            {style.icon === null
+                              ? <img src="/logo-waive.png" alt="Waive" className="w-7 h-7 object-contain" />
+                              : style.icon}
                           </div>
                           <div>
                             <div className="flex items-center gap-3 flex-wrap">
                               <h3 className="text-2xl font-bold text-[#0a1628]">
-                                {style.key === "meetingscribe" ? "MeetingScribe" : "FARO"}
+                                {style.key === "meetingscribe" ? "Waive" : "FARO"}
                               </h3>
                               <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${style.badgeClass}`}>
                                 <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${style.dotClass}`} />

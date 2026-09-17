@@ -9,9 +9,9 @@ import MeetingScribeCTA from "@/components/meetingscribe/CTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MeetingScribe — Transcripción y resúmenes de reuniones con IA",
+  title: "Waive — Transcripción y resúmenes de reuniones con IA",
   description:
-    "MeetingScribe transcribe, resume y extrae los puntos clave de tus reuniones automáticamente. 100% privado, sin servidores externos.",
+    "Waive transcribe, resume y extrae los puntos clave de tus reuniones automáticamente. 100% privado, sin servidores externos.",
 };
 
 export default function MeetingScribePage() {

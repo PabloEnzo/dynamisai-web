@@ -81,7 +81,7 @@ export const t = {
       eyebrow: "Contacto",
       title: ["¿Tienes una idea? ", "Hablemos."] as [string, string],
       description:
-        "Si tienes un proyecto en mente, quieres saber más sobre MeetingScribe o simplemente quieres estar al tanto de lo que hacemos, escríbenos. Respondemos rápido.",
+        "Si tienes un proyecto en mente, quieres saber más sobre Waive o simplemente quieres estar al tanto de lo que hacemos, escríbenos. Respondemos rápido.",
       form: {
         name: "Tu nombre",
         email: "Tu email",
@@ -165,7 +165,7 @@ export const t = {
           },
         ],
         quote:
-          '"KRON no es solo la IA de MeetingScribe. Es la base sobre la que construiremos todos los productos de DynamisAI. Un cerebro compartido que aprende y mejora con cada producto que desarrollamos."',
+          '"KRON no es solo la IA de Waive. Es la base sobre la que construiremos todos los productos de DynamisAI. Un cerebro compartido que aprende y mejora con cada producto que desarrollamos."',
         quoteAuthor: "— DynamisAI",
       },
       architecture: {
@@ -215,7 +215,7 @@ export const t = {
           },
         ],
         layers: [
-          { label: "Productos (MeetingScribe, futuros...)", color: "#0055e0" },
+          { label: "Productos (Waive, futuros...)", color: "#0055e0" },
           { label: "FastAPI REST — /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
           { label: "Sistema de plugins (auto-discovery)", color: "#4a6080" },
           { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
@@ -227,7 +227,7 @@ export const t = {
         eyebrow: "Estado actual",
         title: ["Pipeline completo ", "funcionando"] as [string, string],
         description:
-          "Los tres modelos de KRON funcionan en cadena: MeetingScribe graba, transcribe, resume y extrae tareas en tiempo real, 100% en local. La integración está terminada; ahora empieza la evolución multi-producto.",
+          "Los tres modelos de KRON funcionan en cadena: Waive graba, transcribe, resume y extrae tareas en tiempo real, 100% en local. La integración está terminada; ahora empieza la evolución multi-producto.",
         phase0: {
           label: "Fase 0 — Fundamentos",
           status: "Completado",
@@ -255,7 +255,7 @@ export const t = {
             "Validación de calidad de datos completada",
             "ConformerASR entrenado — 100k steps, val loss 1.23",
             "Evaluación WER: 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%",
-            "Integración live MeetingScribe — endpoint + webm + auth verificado",
+            "Integración live Waive — endpoint + webm + auth verificado",
           ],
         },
         next: {
@@ -265,7 +265,7 @@ export const t = {
             "MeetingSummarizer entrenado (48M params)",
             "Resumen extractivo fiable — sin alucinaciones",
             "TaskExtractor entrenado — persona / tarea / fecha",
-            "Pipeline completo integrado en MeetingScribe",
+            "Pipeline completo integrado en Waive",
             "Docker listo para despliegue en servidor propio",
           ],
         },
@@ -314,12 +314,12 @@ export const t = {
             number: "2",
             title: "Entrenamiento ASR",
             statusLabel: "Completado",
-            desc: "ConformerASR entrenado en GPU propio — 100k steps, val loss 1.23. WER 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%. Integración live con MeetingScribe verificada.",
+            desc: "ConformerASR entrenado en GPU propio — 100k steps, val loss 1.23. WER 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%. Integración live con Waive verificada.",
             items: [
               "Entrenamiento 100k steps en GPU propio",
               "WER 21,8% (MLS) / 36,6% (FLEURS)",
               "CER 7,8%",
-              "Integración live MeetingScribe — endpoint + webm + auth",
+              "Integración live Waive — endpoint + webm + auth",
             ],
           },
           {
@@ -338,10 +338,10 @@ export const t = {
             number: "4",
             title: "Integración & Producción",
             statusLabel: "Completado",
-            desc: "Integración live del pipeline KRON con MeetingScribe desktop. Tests end-to-end, optimización de latencia, Docker para despliegue y monitorización en producción.",
+            desc: "Integración live del pipeline KRON con Waive desktop. Tests end-to-end, optimización de latencia, Docker para despliegue y monitorización en producción.",
             items: [
               "Pipeline live ASR → Resumen → Tareas",
-              "Integración MeetingScribe desktop",
+              "Integración Waive desktop",
               "Docker + servidor propio",
               "Latencia < 30s para resumen completo",
             ],
@@ -369,8 +369,8 @@ export const t = {
       cta: {
         title: "¿Quieres ver KRON en acción?",
         description:
-          "KRON impulsa MeetingScribe. Cuando el producto esté listo, podrás probarlo en primera persona — con IA 100% propia, sin enviar tus datos a ningún servidor externo.",
-        cta1: "Ver MeetingScribe →",
+          "KRON impulsa Waive. Cuando el producto esté listo, podrás probarlo en primera persona — con IA 100% propia, sin enviar tus datos a ningún servidor externo.",
+        cta1: "Ver Waive →",
         cta2: "Contactar con nosotros",
       },
     },
@@ -394,7 +394,7 @@ export const t = {
         eyebrow: "Funcionalidades",
         title: ["Todo lo que necesitas para ", "nunca perder el hilo"] as [string, string],
         description:
-          "MeetingScribe combina transcripción de alta calidad con inteligencia artificial para que puedas centrarte en la reunión, no en tomar notas.",
+          "Waive combina transcripción de alta calidad con inteligencia artificial para que puedas centrarte en la reunión, no en tomar notas.",
         items: [
           {
             title: "Transcripción en tiempo real",
@@ -402,7 +402,7 @@ export const t = {
           },
           {
             title: "Resúmenes con IA",
-            desc: "Al finalizar la reunión, MeetingScribe genera automáticamente un resumen ejecutivo con los temas clave tratados.",
+            desc: "Al finalizar la reunión, Waive genera automáticamente un resumen ejecutivo con los temas clave tratados.",
           },
           {
             title: "Puntos de acción",
@@ -430,13 +430,13 @@ export const t = {
         steps: [
           {
             step: "01",
-            title: "Abre MeetingScribe",
+            title: "Abre Waive",
             desc: "Inicia la aplicación de escritorio antes de tu reunión. Compatible con cualquier plataforma de videoconferencia o reunión presencial.",
           },
           {
             step: "02",
             title: "Empieza a grabar",
-            desc: "Con un clic, MeetingScribe comienza a capturar el audio y transcribir en tiempo real. Ves el texto aparecer al instante.",
+            desc: "Con un clic, Waive comienza a capturar el audio y transcribir en tiempo real. Ves el texto aparecer al instante.",
           },
           {
             step: "03",
@@ -454,7 +454,7 @@ export const t = {
         eyebrow: "Acceso temprano",
         title: ["Sé el primero ", "en probarlo"] as [string, string],
         description:
-          "MeetingScribe está en desarrollo activo. Únete a la lista de espera y recibirás acceso antes que nadie cuando lancemos.",
+          "Waive está en desarrollo activo. Únete a la lista de espera y recibirás acceso antes que nadie cuando lancemos.",
         notice: "Lanzamiento previsto: 2027",
         benefits: [
           "Acceso beta cerrada antes del lanzamiento público",
@@ -468,10 +468,10 @@ export const t = {
       },
       appPreview: {
         eyebrow: "Vista previa",
-        title: ["Así se ve ", "MeetingScribe"] as [string, string],
+        title: ["Así se ve ", "Waive"] as [string, string],
         description:
           "Una interfaz limpia y sin distracciones. Todo lo que necesitas, justo donde lo esperas.",
-        note: "* Vista previa interactiva — pulsa los elementos del menú lateral para navegar. MeetingScribe está en desarrollo activo.",
+        note: "* Vista previa interactiva — pulsa los elementos del menú lateral para navegar. Waive está en desarrollo activo.",
         sidebarItems: [
           { id: "dashboard", label: "Inicio" },
           { id: "record", label: "Grabar" },
@@ -568,7 +568,7 @@ export const t = {
       cta: {
         title: ["Sé el primero en ", "probarlo"] as [string, string],
         description:
-          "MeetingScribe está en desarrollo activo. Déjanos tu email y te avisaremos en cuanto esté listo para el acceso anticipado.",
+          "Waive está en desarrollo activo. Déjanos tu email y te avisaremos en cuanto esté listo para el acceso anticipado.",
         placeholder: "tu@email.com",
         button: "Avisarme →",
         note: "Sin spam. Solo te avisamos cuando lancemos.",
@@ -903,7 +903,7 @@ export const t = {
       eyebrow: "Contact",
       title: ["Have an idea? ", "Let's talk."] as [string, string],
       description:
-        "If you have a project in mind, want to learn more about MeetingScribe, or simply want to stay up to date with what we do, write to us. We respond quickly.",
+        "If you have a project in mind, want to learn more about Waive, or simply want to stay up to date with what we do, write to us. We respond quickly.",
       form: {
         name: "Your name",
         email: "Your email",
@@ -987,7 +987,7 @@ export const t = {
           },
         ],
         quote:
-          '"KRON is not just MeetingScribe\'s AI. It\'s the foundation on which we\'ll build all DynamisAI products. A shared brain that learns and improves with every product we develop."',
+          '"KRON is not just Waive\'s AI. It\'s the foundation on which we\'ll build all DynamisAI products. A shared brain that learns and improves with every product we develop."',
         quoteAuthor: "— DynamisAI",
       },
       architecture: {
@@ -1037,7 +1037,7 @@ export const t = {
           },
         ],
         layers: [
-          { label: "Products (MeetingScribe, future...)", color: "#0055e0" },
+          { label: "Products (Waive, future...)", color: "#0055e0" },
           { label: "FastAPI REST — /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
           { label: "Plugin system (auto-discovery)", color: "#4a6080" },
           { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
@@ -1049,7 +1049,7 @@ export const t = {
         eyebrow: "Current state",
         title: ["Full pipeline ", "up and running"] as [string, string],
         description:
-          "KRON's three models work in a chain: MeetingScribe records, transcribes, summarizes and extracts tasks in real time, 100% locally. Integration is done; now the multi-product evolution begins.",
+          "KRON's three models work in a chain: Waive records, transcribes, summarizes and extracts tasks in real time, 100% locally. Integration is done; now the multi-product evolution begins.",
         phase0: {
           label: "Phase 0 — Foundations",
           status: "Completed",
@@ -1077,7 +1077,7 @@ export const t = {
             "Data quality validation completed",
             "ConformerASR trained — 100k steps, val loss 1.23",
             "WER evaluation: 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%",
-            "Live MeetingScribe integration — endpoint + webm + auth verified",
+            "Live Waive integration — endpoint + webm + auth verified",
           ],
         },
         next: {
@@ -1087,7 +1087,7 @@ export const t = {
             "MeetingSummarizer trained (48M params)",
             "Reliable extractive summary — no hallucinations",
             "TaskExtractor trained — person / task / date",
-            "Full pipeline integrated into MeetingScribe",
+            "Full pipeline integrated into Waive",
             "Docker ready for self-hosted deployment",
           ],
         },
@@ -1136,12 +1136,12 @@ export const t = {
             number: "2",
             title: "ASR Training",
             statusLabel: "Completed",
-            desc: "ConformerASR trained on own GPU — 100k steps, val loss 1.23. WER 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%. Live integration with MeetingScribe verified.",
+            desc: "ConformerASR trained on own GPU — 100k steps, val loss 1.23. WER 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%. Live integration with Waive verified.",
             items: [
               "Training 100k steps on own GPU",
               "WER 21.8% (MLS) / 36.6% (FLEURS)",
               "CER 7.8%",
-              "Live MeetingScribe integration — endpoint + webm + auth",
+              "Live Waive integration — endpoint + webm + auth",
             ],
           },
           {
@@ -1160,10 +1160,10 @@ export const t = {
             number: "4",
             title: "Integration & Production",
             statusLabel: "Completed",
-            desc: "Live integration of KRON pipeline with MeetingScribe desktop. End-to-end tests, latency optimization, Docker for deployment and production monitoring.",
+            desc: "Live integration of KRON pipeline with Waive desktop. End-to-end tests, latency optimization, Docker for deployment and production monitoring.",
             items: [
               "Live pipeline ASR → Summary → Tasks",
-              "MeetingScribe desktop integration",
+              "Waive desktop integration",
               "Docker + own server",
               "Latency < 30s for full summary",
             ],
@@ -1191,8 +1191,8 @@ export const t = {
       cta: {
         title: "Want to see KRON in action?",
         description:
-          "KRON powers MeetingScribe. When the product is ready, you'll be able to try it first-hand — with 100% own AI, without sending your data to any external server.",
-        cta1: "See MeetingScribe →",
+          "KRON powers Waive. When the product is ready, you'll be able to try it first-hand — with 100% own AI, without sending your data to any external server.",
+        cta1: "See Waive →",
         cta2: "Contact us",
       },
     },
@@ -1217,7 +1217,7 @@ export const t = {
         eyebrow: "Features",
         title: ["Everything you need to ", "never lose track"] as [string, string],
         description:
-          "MeetingScribe combines high-quality transcription with artificial intelligence so you can focus on the meeting, not on taking notes.",
+          "Waive combines high-quality transcription with artificial intelligence so you can focus on the meeting, not on taking notes.",
         items: [
           {
             title: "Real-time transcription",
@@ -1225,7 +1225,7 @@ export const t = {
           },
           {
             title: "AI summaries",
-            desc: "When the meeting ends, MeetingScribe automatically generates an executive summary with the key topics discussed.",
+            desc: "When the meeting ends, Waive automatically generates an executive summary with the key topics discussed.",
           },
           {
             title: "Action points",
@@ -1252,13 +1252,13 @@ export const t = {
         steps: [
           {
             step: "01",
-            title: "Open MeetingScribe",
+            title: "Open Waive",
             desc: "Launch the desktop application before your meeting. Compatible with any video conferencing platform or in-person meeting.",
           },
           {
             step: "02",
             title: "Start recording",
-            desc: "With one click, MeetingScribe begins capturing audio and transcribing in real time. You see the text appear instantly.",
+            desc: "With one click, Waive begins capturing audio and transcribing in real time. You see the text appear instantly.",
           },
           {
             step: "03",
@@ -1276,7 +1276,7 @@ export const t = {
         eyebrow: "Early access",
         title: ["Be the first ", "to try it"] as [string, string],
         description:
-          "MeetingScribe is in active development. Join the waitlist and get access before anyone else when we launch.",
+          "Waive is in active development. Join the waitlist and get access before anyone else when we launch.",
         notice: "Expected launch: 2027",
         benefits: [
           "Closed beta access before public launch",
@@ -1290,10 +1290,10 @@ export const t = {
       },
       appPreview: {
         eyebrow: "Preview",
-        title: ["This is ", "MeetingScribe"] as [string, string],
+        title: ["This is ", "Waive"] as [string, string],
         description:
           "A clean, distraction-free interface. Everything you need, exactly where you expect it.",
-        note: "* Interactive preview — click the sidebar menu items to navigate. MeetingScribe is in active development.",
+        note: "* Interactive preview — click the sidebar menu items to navigate. Waive is in active development.",
         sidebarItems: [
           { id: "dashboard", label: "Home" },
           { id: "record", label: "Record" },
@@ -1390,7 +1390,7 @@ export const t = {
       cta: {
         title: ["Be the first to ", "try it"] as [string, string],
         description:
-          "MeetingScribe is in active development. Leave us your email and we'll notify you as soon as it's ready for early access.",
+          "Waive is in active development. Leave us your email and we'll notify you as soon as it's ready for early access.",
         placeholder: "your@email.com",
         button: "Notify me →",
         note: "No spam. We'll only notify you when we launch.",

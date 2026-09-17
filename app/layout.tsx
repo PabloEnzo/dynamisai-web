@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DynamisAI — IA propia. Sin nube. Sin intermediarios.",
     description:
-      "Software con inteligencia artificial construida en casa. MeetingScribe y FARO: privacidad real, sin dependencias externas.",
+      "Software con inteligencia artificial construida en casa. Waive y FARO: privacidad real, sin dependencias externas.",
     url: "https://dynamisai.es",
     siteName: "DynamisAI",
     images: [{ url: "/banner.png", width: 1200, height: 630 }],
