@@ -101,6 +101,7 @@ export const t = {
     },
     footer: {
       copyright: "Todos los derechos reservados.",
+      legal: "Aviso legal",
       privacy: "Privacidad",
       terms: "Términos",
       linkedin: "LinkedIn",
@@ -923,6 +924,7 @@ export const t = {
     },
     footer: {
       copyright: "All rights reserved.",
+      legal: "Legal notice",
       privacy: "Privacy",
       terms: "Terms",
       linkedin: "LinkedIn",

@@ -37,8 +37,8 @@ export default function PrivacidadPage() {
         body: "You have the right to access, rectify, erase, restrict processing, data portability and object to processing. To exercise them, write to consulting@dynamisai.es.",
       },
       {
-        heading: "7. Cookies",
-        body: "This website only uses technical session cookies necessary for its operation. No advertising, analytics or third-party cookies.",
+        heading: "7. Cookies and analytics",
+        body: "This website does not use cookies of any kind — not technical, advertising, analytics or third-party. We do not track users, their sessions or their browsing behaviour. Google Fonts are self-hosted at build time; no font requests are made to Google servers at runtime.",
       },
     ],
   } : {
@@ -70,8 +70,8 @@ export default function PrivacidadPage() {
         body: "Tienes derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición. Para ejercerlos, escríbenos a consulting@dynamisai.es.",
       },
       {
-        heading: "7. Cookies",
-        body: "Este sitio web solo utiliza cookies técnicas de sesión necesarias para su funcionamiento. No hay cookies de publicidad, analítica ni de terceros.",
+        heading: "7. Cookies y analítica",
+        body: "Este sitio web no utiliza cookies de ningún tipo — ni técnicas, ni de publicidad, analítica o terceros. No realizamos seguimiento de usuarios, sesiones ni comportamiento de navegación. Las fuentes Google se auto-hospedan en el momento de compilación; ninguna petición se realiza a servidores de Google en tiempo de ejecución.",
       },
     ],
   };
