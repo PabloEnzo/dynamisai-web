@@ -3,15 +3,7 @@ import Link from "next/link";
 import Reveal from "../Reveal";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
-
-const RINGS = [
-  { size: 260,  rx: "55% 45% 60% 40% / 45% 55% 45% 55%", delay: 0,    dur: 5   },
-  { size: 420,  rx: "48% 52% 55% 45% / 50% 48% 52% 50%", delay: 0.5,  dur: 5.5 },
-  { size: 590,  rx: "52% 48% 45% 55% / 48% 52% 48% 52%", delay: 1,    dur: 6   },
-  { size: 760,  rx: "45% 55% 50% 50% / 52% 48% 52% 48%", delay: 1.5,  dur: 6.5 },
-  { size: 940,  rx: "50% 50% 55% 45% / 46% 54% 46% 54%", delay: 2,    dur: 7   },
-  { size: 1120, rx: "53% 47% 48% 52% / 50% 50% 50% 50%", delay: 2.5,  dur: 7.5 },
-];
+import WaveCanvas from "./WaveCanvas";
 
 export default function MeetingScribeHero() {
   const { lang } = useLang();
@@ -20,24 +12,9 @@ export default function MeetingScribeHero() {
   return (
     <section
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 pt-20"
-      style={{ background: "linear-gradient(160deg, #eef1fb 0%, #e8edf8 100%)" }}
+      style={{ background: "transparent" }}
     >
-      {/* Wave rings */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        {RINGS.map((r, i) => (
-          <div
-            key={i}
-            className="absolute"
-            style={{
-              width: r.size,
-              height: r.size * 0.88,
-              borderRadius: r.rx,
-              border: `1.5px solid rgba(67, 97, 238, ${Math.max(0.04, 0.14 - i * 0.02)})`,
-              animation: `wave-ring-pulse ${r.dur}s ease-in-out ${r.delay}s infinite`,
-            }}
-          />
-        ))}
-      </div>
+      <WaveCanvas />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
@@ -71,9 +48,9 @@ export default function MeetingScribeHero() {
           </div>
 
           <h1
-            className="text-6xl md:text-8xl font-bold leading-tight mb-6 tracking-tight"
+            className="text-7xl md:text-9xl font-thin leading-none mb-8 tracking-[0.12em] uppercase"
             style={{
-              background: "linear-gradient(135deg, #1e293b 0%, #4361ee 60%, #00c8d8 100%)",
+              background: "linear-gradient(135deg, #1e293b 0%, #4361ee 55%, #00c8d8 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -82,10 +59,10 @@ export default function MeetingScribeHero() {
             Waive
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#334155] max-w-2xl mx-auto mb-4 leading-relaxed font-medium">
+          <p className="text-lg md:text-xl text-[#475569] max-w-xl mx-auto mb-4 leading-loose tracking-wide font-light">
             {tx.subtitle}
           </p>
-          <p className="text-base text-[#64748b] max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-sm text-[#94a3b8] max-w-md mx-auto mb-12 leading-loose tracking-wide">
             {tx.description}
           </p>
 
