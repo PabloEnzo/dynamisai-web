@@ -48,9 +48,9 @@ export default function MeetingScribeHero() {
           </div>
 
           <h1
-            className="text-7xl md:text-9xl font-thin leading-none mb-8 tracking-[0.12em] uppercase"
+            className="text-6xl md:text-8xl font-bold leading-tight mb-6 tracking-tight"
             style={{
-              background: "linear-gradient(135deg, #1e293b 0%, #4361ee 55%, #00c8d8 100%)",
+              background: "linear-gradient(135deg, #1e293b 0%, #4361ee 60%, #00c8d8 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -59,10 +59,10 @@ export default function MeetingScribeHero() {
             Waive
           </h1>
 
-          <p className="text-lg md:text-xl text-[#475569] max-w-xl mx-auto mb-4 leading-loose tracking-wide font-light">
+          <p className="text-xl md:text-2xl text-[#334155] max-w-2xl mx-auto mb-4 leading-relaxed font-medium">
             {tx.subtitle}
           </p>
-          <p className="text-sm text-[#94a3b8] max-w-md mx-auto mb-12 leading-loose tracking-wide">
+          <p className="text-base text-[#64748b] max-w-xl mx-auto mb-10 leading-relaxed">
             {tx.description}
           </p>
 
