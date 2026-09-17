@@ -8,35 +8,35 @@ export const t = {
       talkToUs: "Hablemos",
     },
     hero: {
-      title: ["Software que ", "piensa", " contigo"] as [string, string, string],
+      title: ["Software con IA propia. ", "Sin nube,", " sin intermediarios."] as [string, string, string],
       description:
-        "En DynamisAI construimos productos de software donde la inteligencia artificial no es un añadido: es el núcleo. Cada línea de código diseñada para potenciar lo que las personas hacen mejor.",
+        "Construimos productos donde la IA corre en tu hardware, no en servidores de terceros. Transcripción de reuniones, comunicaciones de emergencia: siempre bajo tu control.",
       viewProjects: "Ver proyectos",
       learnMore: "Conocer más →",
-      tags: ["IA integrada", "Alto rendimiento", "Privacidad primero", "Escalable"],
+      tags: ["IA 100% propia", "Sin nube", "Privacidad primero", "Open Source"],
       scroll: "scroll",
     },
     about: {
       eyebrow: "Quiénes somos",
-      title: ["Una empresa nacida desde la ", "curiosidad técnica"] as [string, string],
+      title: ["Software con IA propia, ", "construida en casa"] as [string, string],
       description:
-        "DynamisAI nació con una premisa clara: el software del futuro no puede ser estático. Combinamos ingeniería de software rigurosa con inteligencia artificial desarrollada en casa para crear productos que aprenden, se adaptan y escalan.",
+        "DynamisAI construye software con modelos de IA propios — entrenados en nuestro hardware, sin depender de proveedores externos. Porque el control sobre la tecnología es el control sobre el negocio.",
       values: [
         {
           title: "IA como núcleo",
-          desc: "No integramos IA como una función extra. La construimos desde el interior de cada producto, entrenando modelos propios adaptados a cada necesidad.",
+          desc: "Entrenamos nuestros propios modelos. Cada producto tiene la IA que necesita, no la que vende el proveedor de turno.",
         },
         {
           title: "Investigación aplicada",
-          desc: "Cada producto que desarrollamos es el resultado de investigación real. Entendemos la tecnología antes de usarla.",
+          desc: "No usamos la IA de moda. Investigamos, entendemos y construimos solo lo que realmente funciona.",
         },
         {
           title: "Sin dependencias externas",
-          desc: "Apostamos por arquitecturas propias. Nuestros modelos corren en infraestructura propia, sin APIs de terceros ni costes por token.",
+          desc: "Nuestros modelos corren en nuestro hardware. Sin APIs de terceros, sin costes por token, sin datos cedidos.",
         },
         {
           title: "Software para personas",
-          desc: "La tecnología más avanzada solo tiene sentido si mejora el día a día de quien la usa. Diseñamos pensando en el usuario final.",
+          desc: "La IA más avanzada no vale nada si no mejora tu vida. Diseñamos con el usuario final como única prioridad.",
         },
       ],
     },
@@ -51,22 +51,22 @@ export const t = {
         desc: "Estamos investigando y diseñando los próximos productos de DynamisAI. Síguenos para enterarte cuando lancemos algo nuevo.",
       },
       meetingscribe: {
-        tagline: "Reuniones más inteligentes, sin esfuerzo",
+        tagline: "Tus reuniones, transcritas y resumidas. Sin nube.",
         description:
-          "MeetingScribe es una aplicación de escritorio que transcribe, resume y extrae los puntos clave de tus reuniones automáticamente. Impulsada por modelos de IA propios, funciona sin enviar tus datos a ningún servidor externo.",
+          "Transcribe y resume tus reuniones en tiempo real. Todo corre localmente — sin APIs externas, sin que tus conversaciones salgan de tu máquina.",
         status: "En desarrollo",
-        cta: "Ver detalles y precios →",
+        cta: "Ver detalles y unirme →",
         features: [
           "Transcripción automática en tiempo real",
           "Resúmenes y puntos de acción con IA",
-          "100% privado — todo corre en tu máquina",
-          "Integraciones con herramientas de trabajo",
+          "100% local — datos en tu máquina",
+          "Integraciones con Notion, Slack y Jira",
         ],
       },
       faro: {
-        tagline: "Comunicaciones de emergencia que nunca fallan",
+        tagline: "Red de emergencias que funciona cuando todo falla",
         description:
-          "FARO es una plataforma open source de comunicaciones resilientes que combina malla LoRa de bajo coste con IA local de triaje. Sin internet, sin cobertura móvil, sin servidores externos. Para protección civil, municipios y ciudadanos.",
+          "Red de comunicaciones que funciona sin internet ni cobertura móvil. LoRa mesh + IA local de triaje para que los mensajes lleguen siempre, incluso cuando todo lo demás falla.",
         status: "Prototipo activo",
         cta: "Ver FARO →",
         features: [
@@ -103,6 +103,27 @@ export const t = {
       copyright: "Todos los derechos reservados.",
       privacy: "Privacidad",
       terms: "Términos",
+      linkedin: "LinkedIn",
+    },
+    team: {
+      eyebrow: "Equipo",
+      title: ["Las personas detrás de ", "DynamisAI"] as [string, string],
+      description: "Dos cofundadores, dos disciplinas complementarias, una misión: software con IA que respeta tu privacidad.",
+      members: [
+        {
+          name: "Enzo Bagnoli",
+          role: "Co-founder & Lead Engineer",
+          bio: "Desarrollador e investigador en IA. Diseña la arquitectura, entrena los modelos y construye los productos de DynamisAI.",
+          initials: "EB",
+        },
+        {
+          name: "Ashton Troy",
+          role: "Co-founder",
+          bio: "Responsable de estrategia, producto y relaciones con clientes e instituciones. Impulsa la dirección de DynamisAI.",
+          initials: "AT",
+        },
+      ],
+      photoSoon: "Foto próximamente",
     },
     kron: {
       hero: {
@@ -430,63 +451,20 @@ export const t = {
         ],
       },
       pricing: {
-        eyebrow: "Precios",
-        title: ["Planes simples y ", "sin sorpresas"] as [string, string],
-        description: "14 días de prueba gratuita en todos los planes. Sin tarjeta de crédito.",
-        devNotice:
-          "MeetingScribe está en desarrollo — los precios son orientativos y pueden cambiar antes del lanzamiento.",
-        plans: [
-          {
-            name: "Starter",
-            price: "15",
-            period: "/ mes",
-            desc: "Perfecto para freelancers y profesionales que quieren dejar de tomar notas.",
-            features: [
-              "Hasta 10 reuniones / mes",
-              "Transcripción automática",
-              "Resumen con IA",
-              "Exportar a TXT y PDF",
-              "Historial 30 días",
-            ],
-            notIncluded: ["Puntos de acción IA", "Integraciones externas", "Soporte prioritario"],
-            cta: "Empezar gratis 14 días",
-          },
-          {
-            name: "Pro",
-            price: "29",
-            period: "/ mes",
-            desc: "Para equipos que quieren sacar el máximo partido a cada reunión.",
-            badge: "Más popular",
-            features: [
-              "Reuniones ilimitadas",
-              "Transcripción automática",
-              "Resumen con IA",
-              "Puntos de acción IA",
-              "Exportar a Notion, Slack, Jira",
-              "Historial ilimitado",
-              "Multi-idioma (ES, EN, FR, DE)",
-            ],
-            notIncluded: ["Soporte prioritario"],
-            cta: "Empezar gratis 14 días",
-          },
-          {
-            name: "Business",
-            price: "49",
-            period: "/ mes por usuario",
-            desc: "Para empresas que necesitan privacidad máxima y gestión de equipo.",
-            features: [
-              "Todo lo de Pro",
-              "Panel de administración",
-              "Gestión de equipos y roles",
-              "SSO / integración con directorio",
-              "Modelo IA personalizable",
-              "Soporte prioritario 24/7",
-              "Onboarding dedicado",
-            ],
-            notIncluded: [],
-            cta: "Contactar con ventas",
-          },
+        eyebrow: "Acceso temprano",
+        title: ["Sé el primero ", "en probarlo"] as [string, string],
+        description:
+          "MeetingScribe está en desarrollo activo. Únete a la lista de espera y recibirás acceso antes que nadie cuando lancemos.",
+        notice: "Lanzamiento previsto: 2027",
+        benefits: [
+          "Acceso beta cerrada antes del lanzamiento público",
+          "Precio especial de early adopter",
+          "Canal directo con el equipo de desarrollo",
+          "Influencia real en el roadmap del producto",
         ],
+        cta: "Unirme a la lista →",
+        emailLabel: "o escríbenos directamente",
+        emailHint: "consulting@dynamisai.es",
       },
       appPreview: {
         eyebrow: "Vista previa",
@@ -852,35 +830,35 @@ export const t = {
       talkToUs: "Let's talk",
     },
     hero: {
-      title: ["Software that ", "thinks", " with you"] as [string, string, string],
+      title: ["Software with own AI. ", "No cloud,", " no middlemen."] as [string, string, string],
       description:
-        "At DynamisAI we build software products where artificial intelligence is not an add-on: it's the core. Every line of code designed to amplify what people do best.",
+        "We build products where AI runs on your hardware, not on third-party servers. Meeting transcription, emergency communications — always under your control.",
       viewProjects: "View projects",
       learnMore: "Learn more →",
-      tags: ["Integrated AI", "High performance", "Privacy first", "Scalable"],
+      tags: ["100% own AI", "No cloud", "Privacy first", "Open Source"],
       scroll: "scroll",
     },
     about: {
       eyebrow: "Who we are",
-      title: ["A company born from ", "technical curiosity"] as [string, string],
+      title: ["Software with own AI, ", "built in-house"] as [string, string],
       description:
-        "DynamisAI was born with a clear premise: the software of the future cannot be static. We combine rigorous software engineering with in-house artificial intelligence to create products that learn, adapt and scale.",
+        "DynamisAI builds software with its own AI models — trained on our hardware, without depending on external providers. Because control over technology is control over the business.",
       values: [
         {
           title: "AI as the core",
-          desc: "We don't integrate AI as an extra feature. We build it from inside every product, training custom models adapted to each need.",
+          desc: "We train our own models. Each product gets the AI it needs, not the one a vendor is selling.",
         },
         {
           title: "Applied research",
-          desc: "Every product we develop is the result of real research. We understand the technology before we use it.",
+          desc: "We don't use trendy AI. We research, understand and build only what actually works.",
         },
         {
           title: "No external dependencies",
-          desc: "We bet on our own architectures. Our models run on our own infrastructure, without third-party APIs or per-token costs.",
+          desc: "Our models run on our hardware. No third-party APIs, no per-token costs, no data handed over.",
         },
         {
           title: "Software for people",
-          desc: "The most advanced technology only makes sense if it improves the day-to-day life of those who use it. We design with the end user in mind.",
+          desc: "The most advanced AI is worthless if it doesn't improve your life. We design with the end user as the only priority.",
         },
       ],
     },
@@ -895,9 +873,9 @@ export const t = {
         desc: "We're researching and designing DynamisAI's next products. Follow us to find out when we launch something new.",
       },
       meetingscribe: {
-        tagline: "Smarter meetings, effortlessly",
+        tagline: "Your meetings, transcribed and summarised. No cloud.",
         description:
-          "MeetingScribe is a desktop application that automatically transcribes, summarizes and extracts the key points from your meetings. Powered by our own AI models, it works without sending your data to any external server.",
+          "Transcribes and summarizes your meetings in real time. Everything runs locally — no external APIs, no conversations leaving your machine.",
         status: "In development",
         cta: "See details and pricing →",
         features: [
@@ -908,9 +886,9 @@ export const t = {
         ],
       },
       faro: {
-        tagline: "Emergency communications that never fail",
+        tagline: "Emergency network that works when everything else fails",
         description:
-          "FARO is an open source resilient communications platform that combines low-cost LoRa mesh with local AI triage. No internet, no mobile coverage, no external servers. For civil protection, municipalities and citizens.",
+          "Emergency communications network that works without internet or mobile coverage. LoRa mesh + local AI triage so messages always get through, even when everything else fails.",
         status: "Active prototype",
         cta: "See FARO →",
         features: [
@@ -947,6 +925,27 @@ export const t = {
       copyright: "All rights reserved.",
       privacy: "Privacy",
       terms: "Terms",
+      linkedin: "LinkedIn",
+    },
+    team: {
+      eyebrow: "Team",
+      title: ["The people behind ", "DynamisAI"] as [string, string],
+      description: "Two co-founders, two complementary disciplines, one mission: software with AI that respects your privacy.",
+      members: [
+        {
+          name: "Enzo Bagnoli",
+          role: "Co-founder & Lead Engineer",
+          bio: "Software developer and AI researcher. Designs the architecture, trains the models and builds DynamisAI's products.",
+          initials: "EB",
+        },
+        {
+          name: "Ashton Troy",
+          role: "Co-founder",
+          bio: "Responsible for strategy, product and client and institutional relationships. Drives the direction of DynamisAI.",
+          initials: "AT",
+        },
+      ],
+      photoSoon: "Photo coming soon",
     },
     kron: {
       hero: {
@@ -1274,63 +1273,20 @@ export const t = {
         ],
       },
       pricing: {
-        eyebrow: "Pricing",
-        title: ["Simple plans ", "without surprises"] as [string, string],
-        description: "14-day free trial on all plans. No credit card required.",
-        devNotice:
-          "MeetingScribe is in development — prices are indicative and may change before launch.",
-        plans: [
-          {
-            name: "Starter",
-            price: "15",
-            period: "/ month",
-            desc: "Perfect for freelancers and professionals who want to stop taking notes.",
-            features: [
-              "Up to 10 meetings / month",
-              "Automatic transcription",
-              "AI summary",
-              "Export to TXT and PDF",
-              "30-day history",
-            ],
-            notIncluded: ["AI action points", "External integrations", "Priority support"],
-            cta: "Start free for 14 days",
-          },
-          {
-            name: "Pro",
-            price: "29",
-            period: "/ month",
-            desc: "For teams who want to get the most out of every meeting.",
-            badge: "Most popular",
-            features: [
-              "Unlimited meetings",
-              "Automatic transcription",
-              "AI summary",
-              "AI action points",
-              "Export to Notion, Slack, Jira",
-              "Unlimited history",
-              "Multi-language (ES, EN, FR, DE)",
-            ],
-            notIncluded: ["Priority support"],
-            cta: "Start free for 14 days",
-          },
-          {
-            name: "Business",
-            price: "49",
-            period: "/ month per user",
-            desc: "For companies that need maximum privacy and team management.",
-            features: [
-              "Everything in Pro",
-              "Admin dashboard",
-              "Team and role management",
-              "SSO / directory integration",
-              "Customizable AI model",
-              "Priority support 24/7",
-              "Dedicated onboarding",
-            ],
-            notIncluded: [],
-            cta: "Contact sales",
-          },
+        eyebrow: "Early access",
+        title: ["Be the first ", "to try it"] as [string, string],
+        description:
+          "MeetingScribe is in active development. Join the waitlist and get access before anyone else when we launch.",
+        notice: "Expected launch: 2027",
+        benefits: [
+          "Closed beta access before public launch",
+          "Special early adopter pricing",
+          "Direct channel with the development team",
+          "Real influence on the product roadmap",
         ],
+        cta: "Join the waitlist →",
+        emailLabel: "or write to us directly",
+        emailHint: "consulting@dynamisai.es",
       },
       appPreview: {
         eyebrow: "Preview",

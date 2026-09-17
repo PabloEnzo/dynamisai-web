@@ -14,9 +14,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DynamisAI — Software potenciado por Inteligencia Artificial",
+  title: "DynamisAI — IA propia. Sin nube. Sin intermediarios.",
   description:
-    "DynamisAI es una empresa de desarrollo de software que integra inteligencia artificial en cada producto que crea.",
+    "DynamisAI construye software con IA propia que corre en tu hardware. Transcripción de reuniones, comunicaciones de emergencia: privacidad real, sin APIs externas.",
+  icons: {
+    icon: "/logo-icon.png",
+    apple: "/logo-icon.png",
+  },
+  openGraph: {
+    title: "DynamisAI — IA propia. Sin nube. Sin intermediarios.",
+    description:
+      "Software con inteligencia artificial construida en casa. MeetingScribe y FARO: privacidad real, sin dependencias externas.",
+    url: "https://dynamisai.es",
+    siteName: "DynamisAI",
+    images: [{ url: "/banner.png", width: 1200, height: 630 }],
+    locale: "es_ES",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
