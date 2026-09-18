@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+// CSP is handled per-request in middleware.ts (nonce-based).
+// These headers are static and safe to set at config level.
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -24,21 +26,6 @@ const securityHeaders = [
   {
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
-  },
-  {
-    key: "Content-Security-Policy",
-    value: [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
-      "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob:",
-      "font-src 'self'",
-      "connect-src 'self'",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "object-src 'none'",
-    ].join("; "),
   },
 ];
 
