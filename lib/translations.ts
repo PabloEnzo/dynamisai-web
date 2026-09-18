@@ -672,7 +672,9 @@ export const t = {
         corroboration: {
           eyebrow: "Sistema de corroboración",
           title: "Detección automática de incidentes: sin vigilancia",
-          desc: "Cuando 2 o más reportes de la misma categoría llegan desde una zona de ~700 m, FARO los agrupa y marca el incidente como <strong>confirmado</strong>. Esto permite detección temprana sin necesidad de monitorizar a ningún ciudadano individualmente. Solo reportes voluntarios dentro de la red.",
+          descBefore: "Cuando 2 o más reportes de la misma categoría llegan desde una zona de ~700 m, FARO los agrupa y marca el incidente como ",
+          descStrong: "confirmado",
+          descAfter: ". Esto permite detección temprana sin necesidad de monitorizar a ningún ciudadano individualmente. Solo reportes voluntarios dentro de la red.",
         },
       },
       features: {
@@ -1498,7 +1500,9 @@ export const t = {
         corroboration: {
           eyebrow: "Corroboration system",
           title: "Automatic incident detection: without surveillance",
-          desc: "When 2 or more reports of the same category arrive from an area of ~700 m, FARO groups them and marks the incident as <strong>confirmed</strong>. This enables early detection without monitoring any individual citizen. Only voluntary reports within the network.",
+          descBefore: "When 2 or more reports of the same category arrive from an area of ~700 m, FARO groups them and marks the incident as ",
+          descStrong: "confirmed",
+          descAfter: ". This enables early detection without monitoring any individual citizen. Only voluntary reports within the network.",
         },
       },
       features: {

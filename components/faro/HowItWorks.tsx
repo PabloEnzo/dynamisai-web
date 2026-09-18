@@ -60,10 +60,11 @@ export default function FaroHowItWorks() {
             <p className="text-[#0a1628] font-medium mb-2">
               {tx.corroboration.title}
             </p>
-            <p
-              className="text-[#4a6080] text-sm leading-relaxed max-w-2xl"
-              dangerouslySetInnerHTML={{ __html: tx.corroboration.desc }}
-            />
+            <p className="text-[#4a6080] text-sm leading-relaxed max-w-2xl">
+              {tx.corroboration.descBefore}
+              <strong className="text-[#0a1628]">{tx.corroboration.descStrong}</strong>
+              {tx.corroboration.descAfter}
+            </p>
           </div>
         </Reveal>
       </div>
