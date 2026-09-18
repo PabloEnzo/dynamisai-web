@@ -38,6 +38,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/meetingscribe",
+        destination: "/waive",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

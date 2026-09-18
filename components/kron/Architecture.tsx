@@ -29,6 +29,23 @@ export default function KronArchitecture() {
           </div>
         </Reveal>
 
+        <Reveal delay={60}>
+          <div className="mb-16 rounded-2xl border border-[#e0eaf8] bg-[#f8fbff] p-7 md:p-9">
+            <p className="text-[#0a1628] font-bold text-lg mb-7">{tx.provenance.title}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {tx.provenance.items.map((it) => (
+                <div key={it.label} className="flex flex-col">
+                  <p className="text-[11px] font-semibold text-[#9ab0cc] uppercase tracking-widest mb-2">
+                    {it.label}
+                  </p>
+                  <p className="text-[#0055e0] font-bold text-base mb-2.5">{it.value}</p>
+                  <p className="text-[#4a6080] text-sm leading-relaxed">{it.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           {tx.models.map((m, i) => {
             const style = modelStyles[i];

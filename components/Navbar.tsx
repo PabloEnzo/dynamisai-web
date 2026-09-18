@@ -66,9 +66,13 @@ export default function Navbar() {
           <li>
             <Link
               href="/kron"
-              className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors duration-200"
+              title={tx.kronTitle}
+              className="group/kron inline-flex items-baseline gap-1.5 text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors duration-200"
             >
               KRON
+              <span className="text-[11px] font-medium text-[#9ab0cc] group-hover/kron:text-[#4a6080] transition-colors">
+                {tx.kronTag}
+              </span>
             </Link>
           </li>
         </ul>
@@ -118,9 +122,10 @@ export default function Navbar() {
           <Link
             href="/kron"
             onClick={() => setOpen(false)}
-            className="text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors"
+            className="inline-flex items-baseline gap-1.5 text-sm font-semibold text-[#0055e0] hover:text-[#0044cc] transition-colors"
           >
             KRON
+            <span className="text-[11px] font-medium text-[#9ab0cc]">{tx.kronTag}</span>
           </Link>
           <button
             onClick={() => { setLang(lang === "es" ? "en" : "es"); setOpen(false); }}

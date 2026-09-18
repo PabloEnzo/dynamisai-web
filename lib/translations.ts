@@ -6,6 +6,8 @@ export const t = {
       projects: "Proyectos",
       contact: "Contacto",
       talkToUs: "Hablemos",
+      kronTag: "nuestra IA",
+      kronTitle: "KRON: el motor de IA propio que impulsa nuestros productos",
     },
     hero: {
       title: ["IA que no sale ", "de tu hardware.", ""] as [string, string, string],
@@ -55,12 +57,12 @@ export const t = {
         description:
           "Transcribe y resume tus reuniones en tiempo real. Todo corre localmente: sin APIs externas, sin que tus conversaciones salgan de tu máquina.",
         status: "En desarrollo",
-        cta: "Ver detalles y unirme →",
+        cta: "Ver precios y acceso anticipado →",
         features: [
           "Transcripción automática en tiempo real",
           "Resúmenes y puntos de acción con IA",
           "100% local: datos en tu máquina",
-          "Integraciones con Notion, Slack y Jira",
+          "Exportación opcional a Notion, Slack o Jira",
         ],
       },
       faro: {
@@ -168,9 +170,6 @@ export const t = {
             desc: "Cada peso entrenado es nuestro. No cedemos datos a terceros para mejorar sus modelos. Lo que entrenamos con nuestros datos, nos pertenece.",
           },
         ],
-        quote:
-          '"KRON no es solo la IA de Waive. Es la base sobre la que construiremos todos los productos de DynamisAI. Un cerebro compartido que aprende y mejora con cada producto que desarrollamos."',
-        quoteAuthor: "DynamisAI",
       },
       architecture: {
         eyebrow: "Arquitectura",
@@ -179,6 +178,26 @@ export const t = {
           "KRON no es un modelo único. Es un sistema de tres modelos especializados que trabajan en cadena: audio entra, resumen e tareas salen.",
         stackLabel: "Stack completo",
         techNote: "Autenticación via API Key · SQLite / PostgreSQL · Jobs asíncronos",
+        provenance: {
+          title: "Qué significa exactamente «IA propia»",
+          items: [
+            {
+              label: "Pesos",
+              value: "100% propios",
+              desc: "Cada peso entrenado desde inicialización aleatoria, en nuestro hardware y con nuestro código. Ningún checkpoint preentrenado de terceros: ni Whisper, ni OpenAI, ni ningún otro. Aquí no hay asterisco.",
+            },
+            {
+              label: "Arquitecturas",
+              value: "Implementación propia",
+              desc: "Diseños publicados y contrastados (Conformer, Transformer, FastSpeech2, HiFi-GAN) implementados por nosotros en PyTorch. No inventamos arquitecturas desde cero: implementamos las que la literatura ya ha demostrado que funcionan.",
+            },
+            {
+              label: "Datos",
+              value: "Corpus públicos",
+              desc: "Entrenados sobre datasets abiertos: FLEURS, MLS, CommonVoice, LibriSpeech, MLSUM y LJSpeech. Datos abiertos, no modelos de terceros.",
+            },
+          ],
+        },
         models: [
           {
             name: "ConformerASR",
@@ -421,8 +440,8 @@ export const t = {
             desc: "Accede a todas tus transcripciones y resúmenes anteriores, organizados por fecha, proyecto o participantes.",
           },
           {
-            title: "Integraciones de trabajo",
-            desc: "Exporta resúmenes directamente a Notion, Slack, Jira o por email con un solo clic.",
+            title: "Exportación opcional",
+            desc: "Si quieres, envía un resumen concreto a Notion, Slack, Jira o por email. Es opcional y manual: solo sale de tu equipo lo que tú decides exportar.",
           },
         ],
       },
@@ -837,6 +856,8 @@ export const t = {
       projects: "Projects",
       contact: "Contact",
       talkToUs: "Let's talk",
+      kronTag: "our AI",
+      kronTitle: "KRON: the in-house AI engine behind our products",
     },
     hero: {
       title: ["AI that never leaves ", "your hardware.", ""] as [string, string, string],
@@ -886,12 +907,12 @@ export const t = {
         description:
           "Transcribes and summarizes your meetings in real time. Everything runs locally: no external APIs, no conversations leaving your machine.",
         status: "In development",
-        cta: "See details and pricing →",
+        cta: "See pricing and early access →",
         features: [
           "Automatic real-time transcription",
           "AI summaries and action points",
           "100% private: everything runs on your machine",
-          "Integrations with work tools",
+          "Optional export to Notion, Slack or Jira",
         ],
       },
       faro: {
@@ -999,9 +1020,6 @@ export const t = {
             desc: "Every trained weight is ours. We don't hand data to third parties to improve their models. What we train with our data belongs to us.",
           },
         ],
-        quote:
-          '"KRON is not just Waive\'s AI. It\'s the foundation on which we\'ll build all DynamisAI products. A shared brain that learns and improves with every product we develop."',
-        quoteAuthor: "DynamisAI",
       },
       architecture: {
         eyebrow: "Architecture",
@@ -1010,6 +1028,26 @@ export const t = {
           "KRON is not a single model. It's a system of three specialized models that work in sequence: audio goes in, summary and tasks come out.",
         stackLabel: "Full stack",
         techNote: "API Key authentication · SQLite / PostgreSQL · Async jobs",
+        provenance: {
+          title: "What “our own AI” actually means",
+          items: [
+            {
+              label: "Weights",
+              value: "100% ours",
+              desc: "Every weight trained from random initialisation, on our hardware and with our code. No third-party pretrained checkpoint: no Whisper, no OpenAI, none. There is no asterisk here.",
+            },
+            {
+              label: "Architectures",
+              value: "Our implementation",
+              desc: "Published, proven designs (Conformer, Transformer, FastSpeech2, HiFi-GAN) implemented by us in PyTorch. We don't invent architectures from nothing: we implement the ones the literature has already shown to work.",
+            },
+            {
+              label: "Data",
+              value: "Public corpora",
+              desc: "Trained on open datasets: FLEURS, MLS, CommonVoice, LibriSpeech, MLSUM and LJSpeech. Open data, not third-party models.",
+            },
+          ],
+        },
         models: [
           {
             name: "ConformerASR",
@@ -1253,8 +1291,8 @@ export const t = {
             desc: "Access all your previous transcripts and summaries, organized by date, project or participants.",
           },
           {
-            title: "Work integrations",
-            desc: "Export summaries directly to Notion, Slack, Jira or by email with a single click.",
+            title: "Optional export",
+            desc: "If you want, send a specific summary to Notion, Slack, Jira or by email. It's optional and manual: only what you choose to export ever leaves your machine.",
           },
         ],
       },

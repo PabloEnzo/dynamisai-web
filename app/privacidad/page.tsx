@@ -22,7 +22,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "3. Data processors and international transfers",
-        body: "We use the following service providers that process data on our behalf:\n\n• Vercel Inc. (hosting, USA): our website runs on Vercel's infrastructure. Vercel may process connection data (including IP addresses) in the USA. Transfer safeguard: EU–US Data Privacy Framework (DPF).\n\n• Email delivery provider (to be confirmed): used solely to route contact-form messages to our inbox. We will update this section once the provider is confirmed.\n\nWe do not sell, share or otherwise transfer your data to any other third party.",
+        body: "We use the following service providers that process data on our behalf:\n\n• Vercel Inc. (hosting, USA): our website runs on Vercel's infrastructure. Vercel may process connection data (including IP addresses) in the USA. Transfer safeguard: EU–US Data Privacy Framework (DPF).\n\n• Resend Inc. (email delivery, USA): used solely to route contact-form messages to our inbox. Resend processes the sender's name, email address, subject and message content. Transfer safeguard: Standard Contractual Clauses (SCCs).\n\nWe do not sell, share or otherwise transfer your data to any other third party.",
       },
       {
         heading: "4. Server logs",
@@ -51,7 +51,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "3. Encargados del tratamiento y transferencias internacionales",
-        body: "Utilizamos los siguientes proveedores de servicios que tratan datos por nuestra cuenta:\n\n• Vercel Inc. (hosting, EE. UU.): nuestro sitio web funciona en la infraestructura de Vercel. Vercel puede tratar datos de conexión (incluidas direcciones IP) en EE. UU. Garantía de la transferencia: Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework, DPF).\n\n• Proveedor de envío de emails (por confirmar): se utiliza exclusivamente para enrutar los mensajes del formulario de contacto. Actualizaremos este apartado en cuanto confirmemos el proveedor.\n\nNo vendemos, compartimos ni cedemos tus datos a ningún otro tercero.",
+        body: "Utilizamos los siguientes proveedores de servicios que tratan datos por nuestra cuenta:\n\n• Vercel Inc. (hosting, EE. UU.): nuestro sitio web funciona en la infraestructura de Vercel. Vercel puede tratar datos de conexión (incluidas direcciones IP) en EE. UU. Garantía de la transferencia: Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework, DPF).\n\n• Resend Inc. (envío de email, EE. UU.): se utiliza exclusivamente para enrutar los mensajes del formulario de contacto hasta nuestra bandeja de entrada. Resend trata el nombre, email, asunto y contenido del mensaje del remitente. Garantía de la transferencia: Cláusulas Contractuales Tipo (CCT).\n\nNo vendemos, compartimos ni cedemos tus datos a ningún otro tercero.",
       },
       {
         heading: "4. Registros del servidor",

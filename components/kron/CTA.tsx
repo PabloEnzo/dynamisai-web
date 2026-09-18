@@ -26,7 +26,7 @@ export default function KronCTA() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="/meetingscribe"
+                  href="/waive"
                   className="px-8 py-3.5 rounded-xl bg-white text-[#0055e0] font-semibold text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg"
                 >
                   {tx.cta1}

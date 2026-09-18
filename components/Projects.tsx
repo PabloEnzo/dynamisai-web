@@ -16,7 +16,7 @@ const projectStyles = [
     accentBar: "from-[#0055e0] to-[#00c8d8]",
     ctaClass: "bg-[#0055e0] hover:bg-[#0044cc]",
     checkClass: "text-[#0055e0]",
-    href: "/meetingscribe",
+    href: "/waive",
   },
   {
     key: "faro" as const,

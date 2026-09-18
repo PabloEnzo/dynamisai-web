@@ -35,15 +35,6 @@ export default function KronPhilosophy() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={100}>
-          <div className="mt-10 rounded-3xl border border-[#0055e0]/15 bg-gradient-to-br from-[#eef5ff] to-white p-8 md:p-10">
-            <p className="text-[#0a1628] text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
-              {tx.quote}
-            </p>
-            <p className="text-[#0055e0] text-sm font-semibold mt-4">{tx.quoteAuthor}</p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

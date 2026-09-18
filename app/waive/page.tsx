@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Waive transcribe, resume y extrae los puntos clave de tus reuniones automáticamente. 100% privado, sin servidores externos.",
 };
 
-export default function MeetingScribePage() {
+export default function WaivePage() {
   return (
     <>
       <Navbar />
