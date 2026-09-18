@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Reveal from "../Reveal";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
