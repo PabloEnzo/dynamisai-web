@@ -30,7 +30,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "5. Third parties",
-        body: "We do not sell, share or transfer your data to third parties. Our products run locally on your hardware — we do not process your business data on our servers.",
+        body: "We do not sell, share or transfer your data to third parties. Our products run locally on your hardware: we do not process your business data on our servers.",
       },
       {
         heading: "6. Your rights",
@@ -38,7 +38,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "7. Cookies and analytics",
-        body: "This website does not use cookies of any kind — not technical, advertising, analytics or third-party. We do not track users, their sessions or their browsing behaviour. Google Fonts are self-hosted at build time; no font requests are made to Google servers at runtime.",
+        body: "This website does not use cookies of any kind: not technical, advertising, analytics or third-party. We do not track users, their sessions or their browsing behaviour. Google Fonts are self-hosted at build time; no font requests are made to Google servers at runtime.",
       },
     ],
   } : {
@@ -63,7 +63,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "5. Terceros",
-        body: "No vendemos, compartimos ni cedemos tus datos a terceros. Nuestros productos corren localmente en tu hardware — no procesamos tus datos de negocio en nuestros servidores.",
+        body: "No vendemos, compartimos ni cedemos tus datos a terceros. Nuestros productos corren localmente en tu hardware: no procesamos tus datos de negocio en nuestros servidores.",
       },
       {
         heading: "6. Tus derechos",
@@ -71,7 +71,7 @@ export default function PrivacidadPage() {
       },
       {
         heading: "7. Cookies y analítica",
-        body: "Este sitio web no utiliza cookies de ningún tipo — ni técnicas, ni de publicidad, analítica o terceros. No realizamos seguimiento de usuarios, sesiones ni comportamiento de navegación. Las fuentes Google se auto-hospedan en el momento de compilación; ninguna petición se realiza a servidores de Google en tiempo de ejecución.",
+        body: "Este sitio web no utiliza cookies de ningún tipo: ni técnicas, ni de publicidad, analítica o terceros. No realizamos seguimiento de usuarios, sesiones ni comportamiento de navegación. Las fuentes Google se auto-hospedan en el momento de compilación; ninguna petición se realiza a servidores de Google en tiempo de ejecución.",
       },
     ],
   };

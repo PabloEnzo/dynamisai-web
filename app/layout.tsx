@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DynamisAI — IA propia. Sin nube. Sin intermediarios.",
+  title: "DynamisAI: IA propia. Sin nube. Sin intermediarios.",
   description:
     "DynamisAI construye software con IA propia que corre en tu hardware. Transcripción de reuniones, comunicaciones de emergencia: privacidad real, sin APIs externas.",
   icons: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     apple: "/logo-icon.png",
   },
   openGraph: {
-    title: "DynamisAI — IA propia. Sin nube. Sin intermediarios.",
+    title: "DynamisAI: IA propia. Sin nube. Sin intermediarios.",
     description:
       "Software con inteligencia artificial construida en casa. Waive y FARO: privacidad real, sin dependencias externas.",
     url: "https://dynamisai.es",

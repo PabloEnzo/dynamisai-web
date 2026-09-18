@@ -283,7 +283,7 @@ export default function AppPreview() {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="flex items-center gap-2 px-4 py-1 rounded-md bg-white border border-[#d0d0d0] text-[11px] text-[#616161] shadow-sm">
-                <span className="font-medium">Waive — {screenLabel[active]}</span>
+                <span className="font-medium">Waive: {screenLabel[active]}</span>
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function AppPreview() {
             {active === "record" && <Recording tx={tx} />}
             {(active === "friends" || active === "settings") && (
               <div className="flex-1 bg-[#f5f5f5] flex items-center justify-center flex-col gap-3">
-                <span className="text-4xl">—</span>
+                <span className="text-4xl text-[#cbd5e1]">/</span>
                 <p className="text-[#616161] text-sm font-medium">{tx.section} {screenLabel[active]}</p>
                 <p className="text-[#a0a0a0] text-xs">{tx.comingSoon}</p>
               </div>

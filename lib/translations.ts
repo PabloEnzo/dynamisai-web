@@ -20,7 +20,7 @@ export const t = {
       eyebrow: "Quiénes somos",
       title: ["Software con IA propia, ", "construida en casa"] as [string, string],
       description:
-        "DynamisAI construye software con modelos de IA propios — entrenados en nuestro hardware, sin depender de proveedores externos. Porque el control sobre la tecnología es el control sobre el negocio.",
+        "DynamisAI construye software con modelos de IA propios: entrenados en nuestro hardware, sin depender de proveedores externos. Porque el control sobre la tecnología es el control sobre el negocio.",
       values: [
         {
           title: "IA como núcleo",
@@ -53,13 +53,13 @@ export const t = {
       meetingscribe: {
         tagline: "Tus reuniones, transcritas y resumidas. Sin nube.",
         description:
-          "Transcribe y resume tus reuniones en tiempo real. Todo corre localmente — sin APIs externas, sin que tus conversaciones salgan de tu máquina.",
+          "Transcribe y resume tus reuniones en tiempo real. Todo corre localmente: sin APIs externas, sin que tus conversaciones salgan de tu máquina.",
         status: "En desarrollo",
         cta: "Ver detalles y unirme →",
         features: [
           "Transcripción automática en tiempo real",
           "Resúmenes y puntos de acción con IA",
-          "100% local — datos en tu máquina",
+          "100% local: datos en tu máquina",
           "Integraciones con Notion, Slack y Jira",
         ],
       },
@@ -167,7 +167,7 @@ export const t = {
         ],
         quote:
           '"KRON no es solo la IA de Waive. Es la base sobre la que construiremos todos los productos de DynamisAI. Un cerebro compartido que aprende y mejora con cada producto que desarrollamos."',
-        quoteAuthor: "— DynamisAI",
+        quoteAuthor: "DynamisAI",
       },
       architecture: {
         eyebrow: "Arquitectura",
@@ -217,11 +217,11 @@ export const t = {
         ],
         layers: [
           { label: "Productos (Waive, futuros...)", color: "#0055e0" },
-          { label: "FastAPI REST — /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
+          { label: "FastAPI REST: /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
           { label: "Sistema de plugins (auto-discovery)", color: "#4a6080" },
           { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
           { label: "Modelos KRON (PyTorch)", color: "#7c3aed" },
-          { label: "Servidor propio — sin datos externos", color: "#059669" },
+          { label: "Servidor propio: sin datos externos", color: "#059669" },
         ],
       },
       currentState: {
@@ -230,42 +230,42 @@ export const t = {
         description:
           "Los tres modelos de KRON funcionan en cadena: Waive graba, transcribe, resume y extrae tareas en tiempo real, 100% en local. La integración está terminada; ahora empieza la evolución multi-producto.",
         phase0: {
-          label: "Fase 0 — Fundamentos",
+          label: "Fase 0: Fundamentos",
           status: "Completado",
           items: [
             "Arquitectura completa definida y estructurada",
-            "ConformerASR — código del modelo completo (encoder, CTC head)",
-            "MeetingSummarizer — arquitectura Seq2Seq implementada",
-            "TaskExtractor — modelo de clasificación implementado",
+            "ConformerASR: código del modelo completo (encoder, CTC head)",
+            "MeetingSummarizer: arquitectura Seq2Seq implementada",
+            "TaskExtractor: modelo de clasificación implementado",
             "Audio pipeline: preprocesado, Log-Mel features, VAD, SpecAugment",
             "KronTokenizer BPE (sentencepiece, vocab 8.000)",
             "FastAPI REST con todos los routers (/asr, /nlp, /pipeline, /health)",
             "Sistema de plugins con auto-discovery",
             "MeetingPipeline: ASR → summarize → extract tasks",
-            "JobManager — jobs asíncronos con asyncio",
+            "JobManager: jobs asíncronos con asyncio",
             "Almacenamiento SQLite/PostgreSQL con SQLAlchemy async",
             "Scripts de entrenamiento listos para los 3 modelos",
           ],
         },
         phase12: {
-          label: "Fases 1-2 — Datos + ASR",
+          label: "Fases 1-2: Datos + ASR",
           status: "Completado",
           items: [
             "KronTokenizer entrenado (vocab 8k, FLEURS ES + MLS ES + LibriSpeech EN)",
             "Datasets de audio descargados y preparados para ASR",
             "Validación de calidad de datos completada",
-            "ConformerASR entrenado — 100k steps, val loss 1.23",
+            "ConformerASR entrenado: 100k steps, val loss 1.23",
             "Evaluación WER: 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%",
-            "Integración live Waive — endpoint + webm + auth verificado",
+            "Integración live Waive: endpoint + webm + auth verificado",
           ],
         },
         next: {
-          label: "Fases 3-4 — NLP + Integración",
+          label: "Fases 3-4: NLP + Integración",
           status: "Completado",
           items: [
             "MeetingSummarizer entrenado (48M params)",
-            "Resumen extractivo fiable — sin alucinaciones",
-            "TaskExtractor entrenado — persona / tarea / fecha",
+            "Resumen extractivo fiable: sin alucinaciones",
+            "TaskExtractor entrenado: persona / tarea / fecha",
             "Pipeline completo integrado en Waive",
             "Docker listo para despliegue en servidor propio",
           ],
@@ -315,12 +315,12 @@ export const t = {
             number: "2",
             title: "Entrenamiento ASR",
             statusLabel: "Completado",
-            desc: "ConformerASR entrenado en GPU propio — 100k steps, val loss 1.23. WER 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%. Integración live con Waive verificada.",
+            desc: "ConformerASR entrenado en GPU propio: 100k steps, val loss 1.23. WER 21,8% (MLS) / 36,6% (FLEURS), CER 7,8%. Integración live con Waive verificada.",
             items: [
               "Entrenamiento 100k steps en GPU propio",
               "WER 21,8% (MLS) / 36,6% (FLEURS)",
               "CER 7,8%",
-              "Integración live Waive — endpoint + webm + auth",
+              "Integración live Waive: endpoint + webm + auth",
             ],
           },
           {
@@ -370,7 +370,7 @@ export const t = {
       cta: {
         title: "¿Quieres ver KRON en acción?",
         description:
-          "KRON impulsa Waive. Cuando el producto esté listo, podrás probarlo en primera persona — con IA 100% propia, sin enviar tus datos a ningún servidor externo.",
+          "KRON impulsa Waive. Cuando el producto esté listo, podrás probarlo en primera persona: con IA 100% propia, sin enviar tus datos a ningún servidor externo.",
         cta1: "Ver Waive →",
         cta2: "Contactar con nosotros",
       },
@@ -379,13 +379,13 @@ export const t = {
       hero: {
         back: "Volver a DynamisAI",
         badge: "En desarrollo activo",
-        subtitle: "Transcribe, resume y extrae los puntos clave de tus reuniones — automáticamente.",
+        subtitle: "Transcribe, resume y extrae los puntos clave de tus reuniones: automáticamente.",
         description:
           "Impulsado por modelos de IA propios. Todo corre en tu máquina. Tus datos nunca salen de tu equipo.",
         cta1: "Ver planes y precios",
         cta2: "Cómo funciona →",
         stats: [
-          { value: "100%", label: "Privado — sin nube" },
+          { value: "100%", label: "Privado: sin nube" },
           { value: "< 30s", label: "Resumen generado" },
           { value: "IA propia", label: "Sin APIs externas" },
           { value: "Multi-idioma", label: "ES, EN y más" },
@@ -472,7 +472,7 @@ export const t = {
         title: ["Así se ve ", "Waive"] as [string, string],
         description:
           "Una interfaz limpia y sin distracciones. Todo lo que necesitas, justo donde lo esperas.",
-        note: "* Vista previa interactiva — pulsa los elementos del menú lateral para navegar. Waive está en desarrollo activo.",
+        note: "* Vista previa interactiva: pulsa los elementos del menú lateral para navegar. Waive está en desarrollo activo.",
         sidebarItems: [
           { id: "dashboard", label: "Inicio" },
           { id: "record", label: "Grabar" },
@@ -523,7 +523,7 @@ export const t = {
           hintIdle: "Pulsa para comenzar la transcripción automática",
           hintRecording: "Grabando... habla con normalidad",
           hintPaused: "Grabación en pausa",
-          hintDone: "Grabación finalizada — procesa para obtener el resumen",
+          hintDone: "Grabación finalizada: procesa para obtener el resumen",
         },
         meetings: [
           {
@@ -535,7 +535,7 @@ export const t = {
               "Se definieron las prioridades para el Q2: integración con Notion y mejora de precisión de transcripción.",
           },
           {
-            title: "Llamada con cliente — Acme",
+            title: "Llamada con cliente: Acme",
             date: "Hoy, 12:30",
             duration: "28 min",
             tasks: "1/2 tareas",
@@ -588,7 +588,7 @@ export const t = {
           { value: "23,6 s", label: "Latencia media SOS" },
           { value: "0", label: "SOS no entregados" },
           { value: "84 %", label: "Precisión triaje urgencia" },
-          { value: "100 %", label: "Offline — sin internet" },
+          { value: "100 %", label: "Offline: sin internet" },
         ],
       },
       problem: {
@@ -668,7 +668,7 @@ export const t = {
         ],
         corroboration: {
           eyebrow: "Sistema de corroboración",
-          title: "Detección automática de incidentes — sin vigilancia",
+          title: "Detección automática de incidentes: sin vigilancia",
           desc: "Cuando 2 o más reportes de la misma categoría llegan desde una zona de ~700 m, FARO los agrupa y marca el incidente como <strong>confirmado</strong>. Esto permite detección temprana sin necesidad de monitorizar a ningún ciudadano individualmente. Solo reportes voluntarios dentro de la red.",
         },
       },
@@ -682,7 +682,7 @@ export const t = {
             initials: "LoRa",
             title: "Malla LoRa multi-salto",
             description:
-              "Radio EU868 de largo alcance y bajo consumo. Los nodos se repiten mensajes en varios saltos hasta el puesto de mando. Sin infraestructura — un Raspberry Pi y un módulo LoRa bastan.",
+              "Radio EU868 de largo alcance y bajo consumo. Los nodos se repiten mensajes en varios saltos hasta el puesto de mando. Sin infraestructura: un Raspberry Pi y un módulo LoRa bastan.",
           },
           {
             initials: "IA",
@@ -814,7 +814,7 @@ export const t = {
       cta: {
         title: ["Hagamos que FARO ", "llegue al terreno"] as [string, string],
         description:
-          "Si representas un municipio, eres voluntario de protección civil, investigador o simplemente quieres apoyar el proyecto — queremos conocerte.",
+          "Si representas un municipio, eres voluntario de protección civil, investigador o simplemente quieres apoyar el proyecto: queremos conocerte.",
         cta1: "Contactar con el equipo →",
         cta2: "Conocer la IA detrás: KRON",
         footer: "FARO es open source · Licencia AGPL-3.0 · Desarrollado bajo DynamisAI",
@@ -833,7 +833,7 @@ export const t = {
     hero: {
       title: ["Software with own AI. ", "No cloud,", " no middlemen."] as [string, string, string],
       description:
-        "We build products where AI runs on your hardware, not on third-party servers. Meeting transcription, emergency communications — always under your control.",
+        "We build products where AI runs on your hardware, not on third-party servers. Meeting transcription, emergency communications: always under your control.",
       viewProjects: "View projects",
       learnMore: "Learn more →",
       tags: ["100% own AI", "No cloud", "Privacy first", "Open Source"],
@@ -843,7 +843,7 @@ export const t = {
       eyebrow: "Who we are",
       title: ["Software with own AI, ", "built in-house"] as [string, string],
       description:
-        "DynamisAI builds software with its own AI models — trained on our hardware, without depending on external providers. Because control over technology is control over the business.",
+        "DynamisAI builds software with its own AI models: trained on our hardware, without depending on external providers. Because control over technology is control over the business.",
       values: [
         {
           title: "AI as the core",
@@ -876,13 +876,13 @@ export const t = {
       meetingscribe: {
         tagline: "Your meetings, transcribed and summarised. No cloud.",
         description:
-          "Transcribes and summarizes your meetings in real time. Everything runs locally — no external APIs, no conversations leaving your machine.",
+          "Transcribes and summarizes your meetings in real time. Everything runs locally: no external APIs, no conversations leaving your machine.",
         status: "In development",
         cta: "See details and pricing →",
         features: [
           "Automatic real-time transcription",
           "AI summaries and action points",
-          "100% private — everything runs on your machine",
+          "100% private: everything runs on your machine",
           "Integrations with work tools",
         ],
       },
@@ -990,7 +990,7 @@ export const t = {
         ],
         quote:
           '"KRON is not just Waive\'s AI. It\'s the foundation on which we\'ll build all DynamisAI products. A shared brain that learns and improves with every product we develop."',
-        quoteAuthor: "— DynamisAI",
+        quoteAuthor: "DynamisAI",
       },
       architecture: {
         eyebrow: "Architecture",
@@ -1040,11 +1040,11 @@ export const t = {
         ],
         layers: [
           { label: "Products (Waive, future...)", color: "#0055e0" },
-          { label: "FastAPI REST — /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
+          { label: "FastAPI REST: /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
           { label: "Plugin system (auto-discovery)", color: "#4a6080" },
           { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
           { label: "KRON models (PyTorch)", color: "#7c3aed" },
-          { label: "Own server — no external data", color: "#059669" },
+          { label: "Own server: no external data", color: "#059669" },
         ],
       },
       currentState: {
@@ -1053,42 +1053,42 @@ export const t = {
         description:
           "KRON's three models work in a chain: Waive records, transcribes, summarizes and extracts tasks in real time, 100% locally. Integration is done; now the multi-product evolution begins.",
         phase0: {
-          label: "Phase 0 — Foundations",
+          label: "Phase 0: Foundations",
           status: "Completed",
           items: [
             "Complete architecture defined and structured",
-            "ConformerASR — full model code (encoder, CTC head)",
-            "MeetingSummarizer — Seq2Seq architecture implemented",
-            "TaskExtractor — classification model implemented",
+            "ConformerASR: full model code (encoder, CTC head)",
+            "MeetingSummarizer: Seq2Seq architecture implemented",
+            "TaskExtractor: classification model implemented",
             "Audio pipeline: preprocessing, Log-Mel features, VAD, SpecAugment",
             "KronTokenizer BPE (sentencepiece, vocab 8,000)",
             "FastAPI REST with all routers (/asr, /nlp, /pipeline, /health)",
             "Plugin system with auto-discovery",
             "MeetingPipeline: ASR → summarize → extract tasks",
-            "JobManager — async jobs with asyncio",
+            "JobManager: async jobs with asyncio",
             "SQLite/PostgreSQL storage with SQLAlchemy async",
             "Training scripts ready for 3 models",
           ],
         },
         phase12: {
-          label: "Phases 1-2 — Data + ASR",
+          label: "Phases 1-2: Data + ASR",
           status: "Completed",
           items: [
             "KronTokenizer trained (vocab 8k, FLEURS ES + MLS ES + LibriSpeech EN)",
             "Audio datasets downloaded and prepared for ASR",
             "Data quality validation completed",
-            "ConformerASR trained — 100k steps, val loss 1.23",
+            "ConformerASR trained: 100k steps, val loss 1.23",
             "WER evaluation: 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%",
-            "Live Waive integration — endpoint + webm + auth verified",
+            "Live Waive integration: endpoint + webm + auth verified",
           ],
         },
         next: {
-          label: "Phases 3-4 — NLP + Integration",
+          label: "Phases 3-4: NLP + Integration",
           status: "Completed",
           items: [
             "MeetingSummarizer trained (48M params)",
-            "Reliable extractive summary — no hallucinations",
-            "TaskExtractor trained — person / task / date",
+            "Reliable extractive summary: no hallucinations",
+            "TaskExtractor trained: person / task / date",
             "Full pipeline integrated into Waive",
             "Docker ready for self-hosted deployment",
           ],
@@ -1138,12 +1138,12 @@ export const t = {
             number: "2",
             title: "ASR Training",
             statusLabel: "Completed",
-            desc: "ConformerASR trained on own GPU — 100k steps, val loss 1.23. WER 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%. Live integration with Waive verified.",
+            desc: "ConformerASR trained on own GPU: 100k steps, val loss 1.23. WER 21.8% (MLS) / 36.6% (FLEURS), CER 7.8%. Live integration with Waive verified.",
             items: [
               "Training 100k steps on own GPU",
               "WER 21.8% (MLS) / 36.6% (FLEURS)",
               "CER 7.8%",
-              "Live Waive integration — endpoint + webm + auth",
+              "Live Waive integration: endpoint + webm + auth",
             ],
           },
           {
@@ -1193,7 +1193,7 @@ export const t = {
       cta: {
         title: "Want to see KRON in action?",
         description:
-          "KRON powers Waive. When the product is ready, you'll be able to try it first-hand — with 100% own AI, without sending your data to any external server.",
+          "KRON powers Waive. When the product is ready, you'll be able to try it first-hand: with 100% own AI, without sending your data to any external server.",
         cta1: "See Waive →",
         cta2: "Contact us",
       },
@@ -1203,13 +1203,13 @@ export const t = {
         back: "Back to DynamisAI",
         badge: "Actively in development",
         subtitle:
-          "Transcribe, summarize and extract the key points from your meetings — automatically.",
+          "Transcribe, summarize and extract the key points from your meetings: automatically.",
         description:
           "Powered by our own AI models. Everything runs on your machine. Your data never leaves your device.",
         cta1: "View plans and pricing",
         cta2: "How it works →",
         stats: [
-          { value: "100%", label: "Private — no cloud" },
+          { value: "100%", label: "Private: no cloud" },
           { value: "< 30s", label: "Summary generated" },
           { value: "Own AI", label: "No external APIs" },
           { value: "Multi-language", label: "ES, EN and more" },
@@ -1295,7 +1295,7 @@ export const t = {
         title: ["This is ", "Waive"] as [string, string],
         description:
           "A clean, distraction-free interface. Everything you need, exactly where you expect it.",
-        note: "* Interactive preview — click the sidebar menu items to navigate. Waive is in active development.",
+        note: "* Interactive preview: click the sidebar menu items to navigate. Waive is in active development.",
         sidebarItems: [
           { id: "dashboard", label: "Home" },
           { id: "record", label: "Record" },
@@ -1346,7 +1346,7 @@ export const t = {
           hintIdle: "Press to start automatic transcription",
           hintRecording: "Recording... speak naturally",
           hintPaused: "Recording paused",
-          hintDone: "Recording ended — process to get your summary",
+          hintDone: "Recording ended: process to get your summary",
         },
         meetings: [
           {
@@ -1358,7 +1358,7 @@ export const t = {
               "Q2 priorities defined: Notion integration and transcription accuracy improvement.",
           },
           {
-            title: "Client call — Acme",
+            title: "Client call: Acme",
             date: "Today, 12:30",
             duration: "28 min",
             tasks: "1/2 tasks",
@@ -1411,7 +1411,7 @@ export const t = {
           { value: "23.6 s", label: "Average SOS latency" },
           { value: "0", label: "Undelivered SOS" },
           { value: "84 %", label: "Urgency triage accuracy" },
-          { value: "100 %", label: "Offline — no internet" },
+          { value: "100 %", label: "Offline: no internet" },
         ],
       },
       problem: {
@@ -1491,7 +1491,7 @@ export const t = {
         ],
         corroboration: {
           eyebrow: "Corroboration system",
-          title: "Automatic incident detection — without surveillance",
+          title: "Automatic incident detection: without surveillance",
           desc: "When 2 or more reports of the same category arrive from an area of ~700 m, FARO groups them and marks the incident as <strong>confirmed</strong>. This enables early detection without monitoring any individual citizen. Only voluntary reports within the network.",
         },
       },
@@ -1505,7 +1505,7 @@ export const t = {
             initials: "LoRa",
             title: "Multi-hop LoRa mesh",
             description:
-              "Long-range, low-power EU868 radio. Nodes relay messages in multiple hops to the command post. No infrastructure — a Raspberry Pi and a LoRa module are enough.",
+              "Long-range, low-power EU868 radio. Nodes relay messages in multiple hops to the command post. No infrastructure: a Raspberry Pi and a LoRa module are enough.",
           },
           {
             initials: "AI",
@@ -1637,7 +1637,7 @@ export const t = {
       cta: {
         title: ["Let's get FARO ", "to the field"] as [string, string],
         description:
-          "If you represent a municipality, are a civil protection volunteer, researcher or simply want to support the project — we want to meet you.",
+          "If you represent a municipality, are a civil protection volunteer, researcher or simply want to support the project: we want to meet you.",
         cta1: "Contact the team →",
         cta2: "Discover the AI behind it: KRON",
         footer: "FARO is open source · AGPL-3.0 License · Developed under DynamisAI",

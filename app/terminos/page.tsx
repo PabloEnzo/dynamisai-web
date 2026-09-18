@@ -22,7 +22,7 @@ export default function TerminosPage() {
       },
       {
         heading: "3. Intellectual property",
-        body: "All content on this site (texts, design, logo) belongs to DynamisAI unless otherwise indicated. FARO is published under the AGPL-3.0 licence — see its repository for details.",
+        body: "All content on this site (texts, design, logo) belongs to DynamisAI unless otherwise indicated. FARO is published under the AGPL-3.0 licence: see its repository for details.",
       },
       {
         heading: "4. Links",
@@ -51,7 +51,7 @@ export default function TerminosPage() {
       },
       {
         heading: "3. Propiedad intelectual",
-        body: "Todo el contenido de este sitio (textos, diseño, logotipo) pertenece a DynamisAI salvo que se indique lo contrario. FARO se publica bajo licencia AGPL-3.0 — consulta su repositorio para más detalles.",
+        body: "Todo el contenido de este sitio (textos, diseño, logotipo) pertenece a DynamisAI salvo que se indique lo contrario. FARO se publica bajo licencia AGPL-3.0: consulta su repositorio para más detalles.",
       },
       {
         heading: "4. Enlaces",

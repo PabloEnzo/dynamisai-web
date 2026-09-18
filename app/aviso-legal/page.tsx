@@ -26,7 +26,7 @@ export default function AvisoLegalPage() {
       },
       {
         heading: "4. Intellectual property",
-        body: "All content on this website — texts, graphics, logos, images, and design — is the property of DynamisAI or its licensors and is protected by intellectual property law. FARO is published under the AGPL-3.0 open-source licence; see its repository for details. Any total or partial reproduction, distribution, or public communication without express written authorisation is prohibited.",
+        body: "All content on this website: texts, graphics, logos, images, and design: is the property of DynamisAI or its licensors and is protected by intellectual property law. FARO is published under the AGPL-3.0 open-source licence; see its repository for details. Any total or partial reproduction, distribution, or public communication without express written authorisation is prohibited.",
       },
       {
         heading: "5. Links to third-party websites",
@@ -59,7 +59,7 @@ export default function AvisoLegalPage() {
       },
       {
         heading: "4. Propiedad intelectual",
-        body: "Todos los contenidos de este sitio web — textos, gráficos, logotipos, imágenes y diseño — son propiedad de DynamisAI o sus licenciantes y están protegidos por la legislación de propiedad intelectual. FARO se publica bajo licencia open source AGPL-3.0; consulta su repositorio para más detalles. Queda prohibida cualquier reproducción, distribución o comunicación pública total o parcial sin autorización expresa y por escrito.",
+        body: "Todos los contenidos de este sitio web: textos, gráficos, logotipos, imágenes y diseño: son propiedad de DynamisAI o sus licenciantes y están protegidos por la legislación de propiedad intelectual. FARO se publica bajo licencia open source AGPL-3.0; consulta su repositorio para más detalles. Queda prohibida cualquier reproducción, distribución o comunicación pública total o parcial sin autorización expresa y por escrito.",
       },
       {
         heading: "5. Enlaces a sitios de terceros",
