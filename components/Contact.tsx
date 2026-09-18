@@ -10,6 +10,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const { lang } = useLang();
   const tx = t[lang].contact;
@@ -132,9 +133,26 @@ export default function Contact() {
                     </p>
                   )}
 
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={consent}
+                      onChange={(e) => setConsent(e.target.checked)}
+                      className="mt-0.5 w-4 h-4 shrink-0 rounded border-[#b8d0f0] accent-[#0055e0] cursor-pointer"
+                    />
+                    <span className="text-xs text-[#4a6080] leading-relaxed">
+                      {tx.form.consentPrefix}{" "}
+                      <a href="/privacidad" className="text-[#0055e0] underline underline-offset-2 hover:text-[#0044cc]">
+                        {tx.form.consentLink}
+                      </a>
+                      {tx.form.consentSuffix}
+                    </span>
+                  </label>
+
                   <button
                     type="submit"
-                    disabled={status === "loading"}
+                    disabled={status === "loading" || !consent}
                     className="px-6 py-3.5 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {status === "loading" ? tx.form.sending : tx.form.send}

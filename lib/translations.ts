@@ -13,7 +13,7 @@ export const t = {
         "Construimos productos donde la IA corre en tu hardware, no en servidores de terceros. Transcripción de reuniones, comunicaciones de emergencia: siempre bajo tu control.",
       viewProjects: "Ver proyectos",
       learnMore: "Conocer más →",
-      tags: ["IA 100% propia", "Sin nube", "Privacidad primero", "Open Source"],
+      tags: ["IA 100% propia", "Sin nube", "Privacidad primero", "FARO Open Source"],
       scroll: "scroll",
     },
     about: {
@@ -81,7 +81,7 @@ export const t = {
       eyebrow: "Contacto",
       title: ["¿Tienes una idea? ", "Hablemos."] as [string, string],
       description:
-        "Si tienes un proyecto en mente, quieres saber más sobre Waive o simplemente quieres estar al tanto de lo que hacemos, escríbenos. Respondemos rápido.",
+        "Si tienes un proyecto en mente, quieres saber más sobre Waive o simplemente quieres estar al tanto de lo que hacemos, escríbenos.",
       form: {
         name: "Tu nombre",
         email: "Tu email",
@@ -89,6 +89,9 @@ export const t = {
         message: "Cuéntanos tu idea o pregunta...",
         send: "Enviar mensaje →",
         sending: "Enviando...",
+        consentPrefix: "He leído y acepto la",
+        consentLink: "Política de Privacidad",
+        consentSuffix: " y doy mi consentimiento para el tratamiento de mis datos con el fin de responder a mi consulta.",
       },
       success: {
         title: "¡Mensaje enviado!",
@@ -836,7 +839,7 @@ export const t = {
         "We build products where AI runs on your hardware, not on third-party servers. Meeting transcription, emergency communications: always under your control.",
       viewProjects: "View projects",
       learnMore: "Learn more →",
-      tags: ["100% own AI", "No cloud", "Privacy first", "Open Source"],
+      tags: ["100% own AI", "No cloud", "Privacy first", "FARO Open Source"],
       scroll: "scroll",
     },
     about: {
@@ -904,7 +907,7 @@ export const t = {
       eyebrow: "Contact",
       title: ["Have an idea? ", "Let's talk."] as [string, string],
       description:
-        "If you have a project in mind, want to learn more about Waive, or simply want to stay up to date with what we do, write to us. We respond quickly.",
+        "If you have a project in mind, want to learn more about Waive, or simply want to stay up to date with what we do, write to us.",
       form: {
         name: "Your name",
         email: "Your email",
@@ -912,6 +915,9 @@ export const t = {
         message: "Tell us about your idea or question...",
         send: "Send message →",
         sending: "Sending...",
+        consentPrefix: "I have read and accept the",
+        consentLink: "Privacy Policy",
+        consentSuffix: " and I consent to my data being processed to respond to my enquiry.",
       },
       success: {
         title: "Message sent!",
