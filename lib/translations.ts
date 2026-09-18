@@ -8,7 +8,7 @@ export const t = {
       talkToUs: "Hablemos",
     },
     hero: {
-      title: ["Software con IA propia. ", "Sin nube,", " sin intermediarios."] as [string, string, string],
+      title: ["IA que no sale ", "de tu hardware.", ""] as [string, string, string],
       description:
         "Construimos productos donde la IA corre en tu hardware, no en servidores de terceros. Transcripción de reuniones, comunicaciones de emergencia: siempre bajo tu control.",
       viewProjects: "Ver proyectos",
@@ -834,7 +834,7 @@ export const t = {
       talkToUs: "Let's talk",
     },
     hero: {
-      title: ["Software with own AI. ", "No cloud,", " no middlemen."] as [string, string, string],
+      title: ["AI that never leaves ", "your hardware.", ""] as [string, string, string],
       description:
         "We build products where AI runs on your hardware, not on third-party servers. Meeting transcription, emergency communications: always under your control.",
       viewProjects: "View projects",
