@@ -1,11 +1,36 @@
 "use client";
+import { useState } from "react";
 import Reveal from "../Reveal";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function MeetingScribeCTA() {
   const { lang } = useLang();
   const tx = t[lang].meetingscribe.cta;
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, product: "Waive" }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section className="py-28 px-6 bg-white">
@@ -24,22 +49,34 @@ export default function MeetingScribeCTA() {
                 {tx.description}
               </p>
 
-              <form
-                className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <input
-                  type="email"
-                  placeholder={tx.placeholder}
-                  className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#b8d0f0] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0] transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] whitespace-nowrap"
+              {status === "success" ? (
+                <p className="text-[#059669] font-semibold text-base">{tx.success}</p>
+              ) : (
+                <form
+                  className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                  onSubmit={handleSubmit}
                 >
-                  {tx.button}
-                </button>
-              </form>
+                  <input
+                    type="email"
+                    placeholder={tx.placeholder}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="flex-1 px-4 py-3 rounded-xl bg-white border border-[#b8d0f0] text-[#0a1628] placeholder-[#9ab0cc] text-sm focus:outline-none focus:border-[#0055e0] transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="px-6 py-3 rounded-xl bg-[#0055e0] hover:bg-[#0044cc] text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  >
+                    {status === "loading" ? tx.sending : tx.button}
+                  </button>
+                </form>
+              )}
+
+              {status === "error" && (
+                <p className="text-sm text-red-500 mt-3">{tx.error}</p>
+              )}
 
               <p className="text-xs text-[#9ab0cc] mt-4">{tx.note}</p>
             </div>

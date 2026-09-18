@@ -575,7 +575,10 @@ export const t = {
           "Waive está en desarrollo activo. Déjanos tu email y te avisaremos en cuanto esté listo para el acceso anticipado.",
         placeholder: "tu@email.com",
         button: "Avisarme →",
+        sending: "Enviando...",
         note: "Sin spam. Solo te avisamos cuando lancemos.",
+        success: "¡Apuntado! Te avisamos en cuanto lancemos.",
+        error: "Error al registrar el email. Inténtalo de nuevo.",
       },
     },
     faro: {
@@ -1403,7 +1406,10 @@ export const t = {
           "Waive is in active development. Leave us your email and we'll notify you as soon as it's ready for early access.",
         placeholder: "your@email.com",
         button: "Notify me →",
+        sending: "Sending...",
         note: "No spam. We'll only notify you when we launch.",
+        success: "You're on the list! We'll notify you when we launch.",
+        error: "Failed to register your email. Please try again.",
       },
     },
     faro: {
