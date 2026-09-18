@@ -23,25 +23,6 @@ export default function FaroHero() {
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
           <div className="flex justify-center mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-sm text-[#4a6080] hover:text-[#0055e0] transition-colors group"
-            >
-              <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              {tx.back}
-            </Link>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-300/60 bg-orange-50 text-orange-700 text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
-              {tx.badge}
-            </div>
-          </div>
-
-          <div className="flex justify-center mb-6">
             <div className="w-20 h-20 rounded-3xl bg-orange-50 border border-orange-200 flex items-center justify-center text-4xl shadow-sm">
               🔦
             </div>

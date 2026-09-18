@@ -22,25 +22,6 @@ export default function KronHero() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
-          <div className="flex justify-center mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-sm text-[#4a6080] hover:text-[#0055e0] transition-colors group"
-            >
-              <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              {tx.back}
-            </Link>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0055e0]/30 bg-[#eef5ff] text-[#0055e0] text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0055e0] animate-pulse" />
-              {tx.badge}
-            </div>
-          </div>
-
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight text-[#0a1628]">
             <span className="gradient-text">KRON</span>
           </h1>

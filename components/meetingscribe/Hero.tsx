@@ -18,35 +18,6 @@ export default function MeetingScribeHero() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
-          <div className="flex justify-center mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-sm text-[#64748b] hover:text-[#4361ee] transition-colors group"
-            >
-              <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              {tx.back}
-            </Link>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium"
-              style={{
-                background: "rgba(67,97,238,0.08)",
-                border: "1px solid rgba(67,97,238,0.22)",
-                color: "#4361ee",
-              }}
-            >
-              <span
-                className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ background: "#4361ee" }}
-              />
-              {tx.badge}
-            </div>
-          </div>
-
           <h1
             className="text-6xl md:text-8xl font-bold leading-tight mb-6 tracking-tight"
             style={{
