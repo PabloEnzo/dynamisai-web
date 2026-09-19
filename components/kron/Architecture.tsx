@@ -46,7 +46,7 @@ export default function KronArchitecture() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {tx.models.map((m, i) => {
             const style = modelStyles[i];
             return (
@@ -85,32 +85,6 @@ export default function KronArchitecture() {
             );
           })}
         </div>
-
-        <Reveal>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-center text-xs font-semibold text-[#4a6080] uppercase tracking-widest mb-6">{tx.stackLabel}</p>
-            <div className="flex flex-col gap-2">
-              {tx.layers.map((l, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl px-5 py-3 text-sm font-medium text-center transition-all duration-200 hover:scale-[1.02]"
-                  style={{
-                    backgroundColor: l.color + "12",
-                    border: `1px solid ${l.color}30`,
-                    color: l.color,
-                  }}
-                >
-                  {l.label}
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 text-center">
-              <span className="inline-flex items-center gap-2 text-xs text-[#4a6080] bg-[#f4f8ff] border border-[#e0eaf8] rounded-full px-4 py-2">
-                {tx.techNote}
-              </span>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

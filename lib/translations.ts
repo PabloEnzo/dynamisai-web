@@ -178,8 +178,6 @@ export const t = {
         title: ["Tres modelos, ", "un pipeline"] as [string, string],
         description:
           "KRON no es un modelo único. Es un sistema de tres modelos especializados que trabajan en cadena: audio entra, resumen e tareas salen.",
-        stackLabel: "Stack completo",
-        techNote: "Autenticación via API Key · SQLite / PostgreSQL · Jobs asíncronos",
         provenance: {
           title: "Qué significa exactamente «IA propia»",
           items: [
@@ -238,14 +236,6 @@ export const t = {
               "Confianza por tarea",
             ],
           },
-        ],
-        layers: [
-          { label: "Productos (Waive, futuros...)", color: "#0055e0" },
-          { label: "FastAPI REST: /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
-          { label: "Sistema de plugins (auto-discovery)", color: "#4a6080" },
-          { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
-          { label: "Modelos KRON (PyTorch)", color: "#7c3aed" },
-          { label: "Servidor propio: sin datos externos", color: "#059669" },
         ],
       },
       currentState: {
@@ -983,8 +973,6 @@ export const t = {
         title: ["Three models, ", "one pipeline"] as [string, string],
         description:
           "KRON is not a single model. It's a system of three specialized models that work in sequence: audio goes in, summary and tasks come out.",
-        stackLabel: "Full stack",
-        techNote: "API Key authentication · SQLite / PostgreSQL · Async jobs",
         provenance: {
           title: "What “our own AI” actually means",
           items: [
@@ -1043,14 +1031,6 @@ export const t = {
               "Per-task confidence",
             ],
           },
-        ],
-        layers: [
-          { label: "Products (Waive, future...)", color: "#0055e0" },
-          { label: "FastAPI REST: /v1/asr, /v1/nlp, /v1/pipeline", color: "#4a6080" },
-          { label: "Plugin system (auto-discovery)", color: "#4a6080" },
-          { label: "Pipeline: ASR → Summarize → Extract Tasks", color: "#4a6080" },
-          { label: "KRON models (PyTorch)", color: "#7c3aed" },
-          { label: "Own server: no external data", color: "#059669" },
         ],
       },
       currentState: {
