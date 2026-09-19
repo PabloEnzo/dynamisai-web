@@ -11,9 +11,11 @@ const projectStyles = [
     badgeClass: "bg-amber-50 border-amber-200 text-amber-700",
     dotClass: "bg-amber-400",
     tags: ["IA local", "Desktop App", "Transcripción", "B2B"],
-    icon: null,
-    iconBg: "bg-[#eef5ff] border-[#b8d0f0]",
-    accentBar: "from-[#0055e0] to-[#00c8d8]",
+    logo: "/logo-waive.png",
+    logoClass: "",
+    cardClass: "card-white",
+    tagClass: "bg-[#eef5ff] border-[#0055e0]/15 text-[#0055e0]",
+    featuresClass: "bg-[#f4f8ff] border-[#e0eaf8]",
     ctaClass: "bg-[#0055e0] hover:bg-[#0044cc]",
     checkClass: "text-[#0055e0]",
     href: "/waive",
@@ -23,9 +25,12 @@ const projectStyles = [
     badgeClass: "bg-orange-50 border-orange-200 text-orange-700",
     dotClass: "bg-orange-400",
     tags: ["Open Source", "LoRa mesh", "IA local", "Emergencias", "NGI Zero"],
-    icon: "🔦",
-    iconBg: "bg-orange-50 border-orange-200",
-    accentBar: "from-[#ea580c] to-[#f97316]",
+    logo: "/logo-faro.png",
+    logoClass: "rounded-xl shadow-md shadow-orange-500/20",
+    cardClass:
+      "bg-white border border-orange-200 shadow-[0_2px_12px_rgba(234,88,12,0.08)] hover:border-[#ea580c] hover:shadow-[0_4px_24px_rgba(234,88,12,0.14)]",
+    tagClass: "bg-orange-50 border-orange-200 text-[#c2410c]",
+    featuresClass: "bg-orange-50/60 border-orange-100",
     ctaClass: "bg-[#ea580c] hover:bg-[#c2410c]",
     checkClass: "text-[#ea580c]",
     href: "/faro",
@@ -59,19 +64,19 @@ export default function Projects() {
             const project = tx[style.key];
             return (
               <Reveal key={style.key}>
-                <div className="card-white rounded-3xl overflow-hidden hover:scale-[1.005] transition-transform duration-300">
+                <div className={`${style.cardClass} rounded-3xl overflow-hidden hover:scale-[1.005] transition-[transform,border-color,box-shadow] duration-300`}>
 
                   <div className="p-8 md:p-10">
                     <div className="flex flex-col md:flex-row md:items-start gap-8">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
-                          {style.icon === null
-                            ? <Image src="/logo-waive.png" alt="Waive" width={40} height={40} className="object-contain shrink-0" />
-                            : (
-                              <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center text-2xl shrink-0 ${style.iconBg}`}>
-                                {style.icon}
-                              </div>
-                            )}
+                          <Image
+                            src={style.logo}
+                            alt=""
+                            width={44}
+                            height={44}
+                            className={`w-11 h-11 object-contain shrink-0 ${style.logoClass}`}
+                          />
                           <div>
                             <div className="flex items-center gap-3 flex-wrap">
                               <h3 className="text-2xl font-bold text-[#0a1628]">
@@ -94,7 +99,7 @@ export default function Projects() {
                           {style.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-3 py-1 rounded-full text-xs font-medium bg-[#eef5ff] border border-[#0055e0]/15 text-[#0055e0]"
+                              className={`px-3 py-1 rounded-full text-xs font-medium border ${style.tagClass}`}
                             >
                               {tag}
                             </span>
@@ -110,7 +115,7 @@ export default function Projects() {
                       </div>
 
                       <div className="md:w-68 shrink-0">
-                        <div className="bg-[#f4f8ff] rounded-2xl p-5 border border-[#e0eaf8]">
+                        <div className={`rounded-2xl p-5 border ${style.featuresClass}`}>
                           <p className="text-xs font-semibold text-[#4a6080] uppercase tracking-wider mb-4">
                             {tx.characteristics}
                           </p>
