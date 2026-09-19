@@ -114,17 +114,17 @@ export const t = {
     team: {
       eyebrow: "Equipo",
       title: ["Las personas detrás de ", "DynamisAI"] as [string, string],
-      description: "Dos cofundadores, dos disciplinas complementarias, una misión: software con IA que respeta tu privacidad.",
+      description: "Un fundador y un CEO, dos disciplinas complementarias y una misión: software con IA que respeta tu privacidad.",
       members: [
         {
-          name: "Enzo Bagnoli",
-          role: "Co-founder & Lead Engineer",
+          name: "Pablo Enzo Velarde Bagnoli",
+          role: "Fundador & Lead Engineer",
           bio: "Desarrollador e investigador en IA. Diseña la arquitectura, entrena los modelos y construye los productos de DynamisAI.",
-          initials: "EB",
+          initials: "PV",
         },
         {
           name: "Ashton Troy",
-          role: "Co-founder",
+          role: "CEO",
           bio: "Responsable de estrategia, producto y relaciones con clientes e instituciones. Impulsa la dirección de DynamisAI.",
           initials: "AT",
         },
@@ -909,17 +909,17 @@ export const t = {
     team: {
       eyebrow: "Team",
       title: ["The people behind ", "DynamisAI"] as [string, string],
-      description: "Two co-founders, two complementary disciplines, one mission: software with AI that respects your privacy.",
+      description: "A founder and a CEO, two complementary disciplines and one mission: software with AI that respects your privacy.",
       members: [
         {
-          name: "Enzo Bagnoli",
-          role: "Co-founder & Lead Engineer",
+          name: "Pablo Enzo Velarde Bagnoli",
+          role: "Founder & Lead Engineer",
           bio: "Software developer and AI researcher. Designs the architecture, trains the models and builds DynamisAI's products.",
-          initials: "EB",
+          initials: "PV",
         },
         {
           name: "Ashton Troy",
-          role: "Co-founder",
+          role: "CEO",
           bio: "Responsible for strategy, product and client and institutional relationships. Drives the direction of DynamisAI.",
           initials: "AT",
         },
