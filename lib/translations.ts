@@ -733,7 +733,7 @@ export const t = {
         },
       },
       roadmap: {
-        eyebrow: "Hoja de ruta",
+        eyebrow: "Roadmap",
         title: ["Del prototipo a ", "infraestructura europea"] as [string, string],
         description:
           "Una ruta de financiación clara: NGI Zero primero (validación y primer despliegue), después UCPM para escalar, Horizon Europe para la investigación de largo plazo.",
