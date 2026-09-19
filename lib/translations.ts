@@ -113,23 +113,17 @@ export const t = {
     },
     team: {
       eyebrow: "Equipo",
-      title: ["Las personas detrás de ", "DynamisAI"] as [string, string],
-      description: "Un fundador y un CEO, dos disciplinas complementarias y una misión: software con IA que respeta tu privacidad.",
+      title: ["Quién está detrás de ", "DynamisAI"] as [string, string],
+      description:
+        "DynamisAI la dirige su fundador, que diseña, desarrolla y trata directamente con cada cliente. Hablas con la persona que construye tu proyecto, sin intermediarios.",
       members: [
         {
           name: "Pablo Enzo Velarde Bagnoli",
-          role: "Fundador & Lead Engineer",
-          bio: "Desarrollador e investigador en IA. Diseña la arquitectura, entrena los modelos y construye los productos de DynamisAI.",
+          role: "Fundador & CEO",
+          bio: "Desarrollador e investigador en IA. Diseña la arquitectura, entrena los modelos y construye los productos de DynamisAI, y es el interlocutor directo de cada cliente e institución: desde la primera reunión hasta la entrega.",
           initials: "PV",
         },
-        {
-          name: "Ashton Troy",
-          role: "CEO",
-          bio: "Responsable de estrategia, producto y relaciones con clientes e instituciones. Impulsa la dirección de DynamisAI.",
-          initials: "AT",
-        },
       ],
-      photoSoon: "Foto próximamente",
     },
     kron: {
       hero: {
@@ -908,23 +902,17 @@ export const t = {
     },
     team: {
       eyebrow: "Team",
-      title: ["The people behind ", "DynamisAI"] as [string, string],
-      description: "A founder and a CEO, two complementary disciplines and one mission: software with AI that respects your privacy.",
+      title: ["Who's behind ", "DynamisAI"] as [string, string],
+      description:
+        "DynamisAI is run by its founder, who designs, builds and deals directly with every client. You talk to the person who builds your project, with no middlemen.",
       members: [
         {
           name: "Pablo Enzo Velarde Bagnoli",
-          role: "Founder & Lead Engineer",
-          bio: "Software developer and AI researcher. Designs the architecture, trains the models and builds DynamisAI's products.",
+          role: "Founder & CEO",
+          bio: "Software developer and AI researcher. Designs the architecture, trains the models and builds DynamisAI's products, and is the direct point of contact for every client and institution, from the first meeting to delivery.",
           initials: "PV",
         },
-        {
-          name: "Ashton Troy",
-          role: "CEO",
-          bio: "Responsible for strategy, product and client and institutional relationships. Drives the direction of DynamisAI.",
-          initials: "AT",
-        },
       ],
-      photoSoon: "Photo coming soon",
     },
     kron: {
       hero: {

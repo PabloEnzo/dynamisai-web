@@ -14,7 +14,7 @@ export default function PrivacidadPage() {
     sections: [
       {
         heading: "1. Who is responsible for your data",
-        body: "DynamisAI (pending formal incorporation) is responsible for processing your personal data. Until formal registration is completed, the responsible persons are the founding team. Contact: consulting@dynamisai.es.",
+        body: "DynamisAI (pending formal incorporation) is responsible for processing your personal data. Until formal registration is completed, the person responsible is its founder, Pablo Enzo Velarde Bagnoli. Contact: consulting@dynamisai.es.",
       },
       {
         heading: "2. What data we collect and why",
@@ -43,7 +43,7 @@ export default function PrivacidadPage() {
     sections: [
       {
         heading: "1. Responsable del tratamiento",
-        body: "DynamisAI (pendiente de constitución formal) es la responsable del tratamiento de tus datos personales. Hasta que se complete el registro formal, los responsables son el equipo fundador. Contacto: consulting@dynamisai.es.",
+        body: "DynamisAI (pendiente de constitución formal) es la responsable del tratamiento de tus datos personales. Hasta que se complete el registro formal, el responsable es su fundador, Pablo Enzo Velarde Bagnoli. Contacto: consulting@dynamisai.es.",
       },
       {
         heading: "2. Datos que recogemos y para qué",

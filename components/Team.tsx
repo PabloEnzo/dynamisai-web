@@ -3,11 +3,6 @@ import Reveal from "./Reveal";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
 
-const avatarColors = [
-  "bg-[#eef5ff] text-[#0055e0] border-[#b8d0f0]",
-  "bg-[#f0fdf4] text-[#059669] border-[#a7f3d0]",
-];
-
 export default function Team() {
   const { lang } = useLang();
   const tx = t[lang].team;
@@ -28,17 +23,17 @@ export default function Team() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+        <div className="flex flex-col gap-6 max-w-3xl">
           {tx.members.map((member, i) => (
             <Reveal key={member.name} delay={i * 60}>
-              <div className="card-white rounded-2xl p-7 flex flex-col gap-5">
-                <div className={`w-16 h-16 rounded-2xl border-2 flex items-center justify-center text-xl font-bold ${avatarColors[i]}`}>
+              <div className="card-white rounded-2xl p-7 md:p-8 flex flex-col sm:flex-row gap-6">
+                <div className="w-20 h-20 shrink-0 rounded-2xl border-2 flex items-center justify-center text-2xl font-bold bg-[#eef5ff] text-[#0055e0] border-[#b8d0f0]">
                   {member.initials}
                 </div>
                 <div>
-                  <p className="text-[#0a1628] font-bold text-lg leading-tight">{member.name}</p>
-                  <p className="text-[#0055e0] text-sm font-medium mt-0.5">{member.role}</p>
-                  <p className="text-[#4a6080] text-sm leading-relaxed mt-3">{member.bio}</p>
+                  <p className="text-[#0a1628] font-bold text-xl leading-tight">{member.name}</p>
+                  <p className="text-[#0055e0] text-sm font-medium mt-1">{member.role}</p>
+                  <p className="text-[#4a6080] text-[15px] leading-relaxed mt-3">{member.bio}</p>
                 </div>
               </div>
             </Reveal>

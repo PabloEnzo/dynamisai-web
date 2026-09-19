@@ -14,7 +14,7 @@ export default function AvisoLegalPage() {
     sections: [
       {
         heading: "1. Identification of the website operator",
-        body: "This website is operated by DynamisAI (pending formal incorporation). Until formal registration is completed, the responsible persons are the founding team, reachable at consulting@dynamisai.es.",
+        body: "This website is operated by DynamisAI (pending formal incorporation). Until formal registration is completed, the person responsible is its founder, Pablo Enzo Velarde Bagnoli, reachable at consulting@dynamisai.es.",
       },
       {
         heading: "2. Contact",
@@ -47,7 +47,7 @@ export default function AvisoLegalPage() {
     sections: [
       {
         heading: "1. Identificación del titular del sitio web",
-        body: "Este sitio web es operado por DynamisAI (pendiente de constitución formal como sociedad). Hasta que se complete el registro formal, los responsables son el equipo fundador, contactables en consulting@dynamisai.es.",
+        body: "Este sitio web es operado por DynamisAI (pendiente de constitución formal como sociedad). Hasta que se complete el registro formal, el responsable es su fundador, Pablo Enzo Velarde Bagnoli, contactable en consulting@dynamisai.es.",
       },
       {
         heading: "2. Datos de contacto",
