@@ -720,7 +720,7 @@ export const t = {
           "Borrador solicitud NGI Zero (41.600 € / 6 tareas)",
         ],
         pending: [
-          "Publicar repo en GitHub (pendiente de decisión de Pablo)",
+          "Publicar repo en GitHub",
           "Comprar hardware Heltec V4 + Tracker GPS (~155 €)",
           "Parser CAP + AEMET para activación automática",
           "Piloto real con municipio / protección civil",
@@ -1515,7 +1515,7 @@ export const t = {
           "NGI Zero application draft (41,600 € / 6 tasks)",
         ],
         pending: [
-          "Publish repo on GitHub (pending Pablo's decision)",
+          "Publish repo on GitHub",
           "Purchase Heltec V4 + GPS Tracker hardware (~155 €)",
           "CAP + AEMET parser for automatic activation",
           "Real pilot with municipality / civil protection",
