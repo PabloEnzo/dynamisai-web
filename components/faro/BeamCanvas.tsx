@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, useRef } from "react";
 
 const SPACING = 32;
 const REVOLUTION_MS = 14000;
@@ -8,19 +8,12 @@ const BASE = { r: 192, g: 216, b: 240, a: 0.4 }; // #c0d8f0, the site's dot grid
 const LIT = { r: 234, g: 88, b: 12 }; // #ea580c, FARO orange
 const BEAM_RGB = "249, 115, 22"; // #f97316
 
-interface Props {
-  /** Element whose lamp the beams rotate around. */
-  originRef: RefObject<HTMLElement | null>;
-  /** Vertical position of the lamp inside that element, 0 = top, 1 = bottom. */
-  lampAt?: number;
-}
-
 function angleGap(a: number, b: number) {
   const d = Math.abs(a - b) % (Math.PI * 2);
   return d > Math.PI ? Math.PI * 2 - d : d;
 }
 
-export default function BeamCanvas({ originRef, lampAt = 0.35 }: Props) {
+export default function BeamCanvas() {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -46,10 +39,9 @@ export default function BeamCanvas({ originRef, lampAt = 0.35 }: Props) {
       canvas!.height = H * dpr;
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      const c = canvas!.getBoundingClientRect();
-      const o = originRef.current?.getBoundingClientRect();
-      ox = o ? o.left - c.left + o.width / 2 : W / 2;
-      oy = o ? o.top - c.top + o.height * lampAt : H * 0.3;
+      // The beams turn from the centre of the hero, behind the headline.
+      ox = W / 2;
+      oy = H / 2;
       reach = Math.hypot(Math.max(ox, W - ox), Math.max(oy, H - oy));
     }
 
@@ -97,7 +89,7 @@ export default function BeamCanvas({ originRef, lampAt = 0.35 }: Props) {
         }
       }
 
-      // The lamp itself: a steady warm glow behind the logo.
+      // The light source itself: a steady warm glow behind the headline.
       const lamp = ctx!.createRadialGradient(ox, oy, 0, ox, oy, 90);
       lamp.addColorStop(0, `rgba(${BEAM_RGB}, 0.22)`);
       lamp.addColorStop(1, `rgba(${BEAM_RGB}, 0)`);
@@ -124,21 +116,18 @@ export default function BeamCanvas({ originRef, lampAt = 0.35 }: Props) {
     });
     observer.observe(canvas);
 
-    // The logo moves while its entrance animation plays and whenever the layout changes.
     const resizeObserver = new ResizeObserver(() => {
       measure();
       if (reduceMotion) draw(REVOLUTION_MS * 0.08);
     });
     resizeObserver.observe(canvas);
-    const settle = window.setTimeout(measure, 1200);
 
     return () => {
       cancelAnimationFrame(raf);
       observer.disconnect();
       resizeObserver.disconnect();
-      window.clearTimeout(settle);
     };
-  }, [originRef, lampAt]);
+  }, []);
 
   return (
     <canvas ref={ref} aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none" />
