@@ -1,5 +1,8 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import Reveal from "../Reveal";
+import NeuralCanvas from "./NeuralCanvas";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
 
@@ -9,15 +12,8 @@ export default function KronHero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 bg-white pt-20">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "radial-gradient(circle, #c0d8f0 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-          opacity: 0.4,
-        }}
-      />
       <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-[#eef5ff] to-transparent pointer-events-none" />
+      <NeuralCanvas />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
@@ -56,6 +52,38 @@ export default function KronHero() {
                 <p className="text-xs text-[#4a6080] mt-0.5">{s.label}</p>
               </div>
             ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={300}>
+          <div className="mt-14">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9ab0cc] mb-5">
+              {tx.poweringLabel}
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-5">
+              {[
+                { href: "/waive", src: "/logo-waive.png", name: "Waive", rounded: "" },
+                { href: "/faro", src: "/logo-faro.png", name: "FARO", rounded: "rounded-lg" },
+              ].map((p) => (
+                <Link
+                  key={p.name}
+                  href={p.href}
+                  className="flex items-center gap-2.5 grayscale opacity-55 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                >
+                  <Image src={p.src} alt="" width={32} height={32} className={`object-contain ${p.rounded}`} />
+                  <span className="font-bold text-lg text-[#0a1628] tracking-tight">{p.name}</span>
+                </Link>
+              ))}
+              <Link
+                href="/#contacto"
+                className="flex items-center gap-2.5 opacity-55 hover:opacity-100 transition duration-300"
+              >
+                <span className="w-8 h-8 rounded-lg border-2 border-dashed border-[#9ab0cc] flex items-center justify-center text-[#9ab0cc] text-lg leading-none">
+                  +
+                </span>
+                <span className="font-bold text-lg text-[#4a6080] tracking-tight">{tx.poweringNext}</span>
+              </Link>
+            </div>
           </div>
         </Reveal>
       </div>

@@ -140,6 +140,8 @@ export const t = {
           "Ningún API externo. Ningún proveedor de terceros. Cada modelo entrenado con nuestros datos, en nuestro hardware, bajo nuestro control total.",
         cta1: "Ver arquitectura técnica",
         cta2: "Dónde funciona →",
+        poweringLabel: "Impulsa a",
+        poweringNext: "Tu proyecto",
         stats: [
           { value: "~53M", label: "Parámetros totales" },
           { value: "3", label: "Modelos propios" },
@@ -249,11 +251,14 @@ export const t = {
       currentState: {
         eyebrow: "Estado actual",
         title: ["Pipeline completo ", "funcionando"] as [string, string],
+        showAll: "Ver los {n} hitos técnicos",
+        hideAll: "Ocultar hitos",
         description:
           "Los tres modelos de KRON funcionan en cadena: Waive graba, transcribe, resume y extrae tareas en tiempo real, 100% en local. La integración está terminada; ahora empieza la evolución multi-producto.",
         phase0: {
           label: "Fase 0: Fundamentos",
           status: "Completado",
+          summary: "Arquitectura de los tres modelos, pipeline de audio, API REST y sistema de plugins.",
           items: [
             "Arquitectura completa definida y estructurada",
             "ConformerASR: código del modelo completo (encoder, CTC head)",
@@ -272,6 +277,7 @@ export const t = {
         phase12: {
           label: "Fases 1-2: Datos + ASR",
           status: "Completado",
+          summary: "Tokenizer propio y reconocimiento de voz entrenado desde cero: 21,8% de WER en MLS.",
           items: [
             "KronTokenizer entrenado (vocab 8k, FLEURS ES + MLS ES + LibriSpeech EN)",
             "Datasets de audio descargados y preparados para ASR",
@@ -284,6 +290,7 @@ export const t = {
         next: {
           label: "Fases 3-4: NLP + Integración",
           status: "Completado",
+          summary: "Resumen y extracción de tareas entrenados e integrados en Waive, listos para desplegar.",
           items: [
             "MeetingSummarizer entrenado (48M params)",
             "Resumen extractivo fiable: sin alucinaciones",
@@ -295,38 +302,45 @@ export const t = {
       },
       ecosystem: {
         eyebrow: "Ecosistema",
-        title: ["Un motor, ", "todos nuestros productos"] as [string, string],
+        title: ["Un motor, ", "adaptado a cada producto"] as [string, string],
         description:
-          "KRON no pertenece a un producto concreto. Es la base común sobre la que construimos cada uno: los mismos modelos y el mismo código, adaptados a cada caso.",
-        core: {
-          label: "Motor de IA propio",
-          capabilities: ["Voz a texto", "Resumen", "Extracción de tareas", "Clasificación", "Síntesis de voz"],
-        },
-        usesLabel: "Usa de KRON",
+          "KRON no es un modelo que se copia de un producto a otro. Es una base propia de modelos, código de entrenamiento y datos de la que cada producto toma lo que necesita, con el tamaño que permite el hardware donde va a funcionar.",
+        points: [
+          {
+            title: "Una API, modelos separados",
+            desc: "Cada capacidad se expone por su cuenta (/v1/asr, /v1/nlp, /v1/pipeline). Un producto llama solo a lo que usa, y mejorar un modelo no obliga a tocar los demás.",
+          },
+          {
+            title: "Se ejecuta donde están los datos",
+            desc: "En Waive, KRON arranca como proceso local junto a la app de escritorio, con un puerto y un token de sesión nuevos en cada arranque. En FARO la inferencia corre en los propios dispositivos de la red, sin conexión.",
+          },
+          {
+            title: "El tamaño lo decide el hardware",
+            desc: "Waive usa los modelos completos en PyTorch. FARO usa un clasificador compacto derivado de KRON, de unos 650 KB y con inferencia en Python puro, porque tiene que responder al instante en equipos modestos y sin red.",
+          },
+        ],
+        productsLabel: "Dónde funciona hoy",
         products: [
           {
             name: "Waive",
-            status: "En desarrollo",
-            desc: "Reuniones transcritas, resumidas y con las tareas extraídas, sin que el audio salga de tu equipo.",
-            uses: ["Voz a texto", "Resumen", "Extracción de tareas"],
+            logo: "/logo-waive.png",
+            role: "Voz a texto, resumen y extracción de tareas",
+            spec: "Modelos completos · PyTorch en CPU local",
             href: "/waive",
-            cta: "Ver Waive →",
           },
           {
             name: "FARO",
-            status: "Prototipo activo",
-            desc: "Triaje automático de mensajes de emergencia en español y catalán, funcionando sin conexión.",
-            uses: ["Clasificación"],
+            logo: "/logo-faro.png",
+            role: "Triaje de urgencia en español y catalán",
+            spec: "~650 KB · Python puro · < 1 ms por mensaje",
             href: "/faro",
-            cta: "Ver FARO →",
           },
           {
             name: "Tu proyecto",
-            status: "Próximo",
-            desc: "Desarrollamos software a medida. Cada proyecto nuevo parte de KRON en lugar de empezar de cero.",
-            uses: [] as string[],
+            logo: null as string | null,
+            role: "Software a medida que parte de lo ya entrenado",
+            spec: "Hablemos de tu caso",
             href: "/#contacto",
-            cta: "Cuéntanos tu idea →",
           },
         ],
       },
@@ -931,6 +945,8 @@ export const t = {
           "No external API. No third-party providers. Every model trained with our data, on our hardware, under our full control.",
         cta1: "See technical architecture",
         cta2: "Where it runs →",
+        poweringLabel: "Powering",
+        poweringNext: "Your project",
         stats: [
           { value: "~53M", label: "Total parameters" },
           { value: "3", label: "Own models" },
@@ -1040,11 +1056,14 @@ export const t = {
       currentState: {
         eyebrow: "Current state",
         title: ["Full pipeline ", "up and running"] as [string, string],
+        showAll: "See all {n} technical milestones",
+        hideAll: "Hide milestones",
         description:
           "KRON's three models work in a chain: Waive records, transcribes, summarizes and extracts tasks in real time, 100% locally. Integration is done; now the multi-product evolution begins.",
         phase0: {
           label: "Phase 0: Foundations",
           status: "Completed",
+          summary: "Architecture for the three models, audio pipeline, REST API and plugin system.",
           items: [
             "Complete architecture defined and structured",
             "ConformerASR: full model code (encoder, CTC head)",
@@ -1063,6 +1082,7 @@ export const t = {
         phase12: {
           label: "Phases 1-2: Data + ASR",
           status: "Completed",
+          summary: "In-house tokenizer and speech recognition trained from scratch: 21.8% WER on MLS.",
           items: [
             "KronTokenizer trained (vocab 8k, FLEURS ES + MLS ES + LibriSpeech EN)",
             "Audio datasets downloaded and prepared for ASR",
@@ -1075,6 +1095,7 @@ export const t = {
         next: {
           label: "Phases 3-4: NLP + Integration",
           status: "Completed",
+          summary: "Summarisation and task extraction trained and integrated into Waive, ready to deploy.",
           items: [
             "MeetingSummarizer trained (48M params)",
             "Reliable extractive summary: no hallucinations",
@@ -1086,38 +1107,45 @@ export const t = {
       },
       ecosystem: {
         eyebrow: "Ecosystem",
-        title: ["One engine, ", "all our products"] as [string, string],
+        title: ["One engine, ", "adapted to each product"] as [string, string],
         description:
-          "KRON doesn't belong to any single product. It's the common foundation we build each one on: the same models and the same code, adapted to each case.",
-        core: {
-          label: "In-house AI engine",
-          capabilities: ["Speech to text", "Summarisation", "Task extraction", "Classification", "Speech synthesis"],
-        },
-        usesLabel: "Uses from KRON",
+          "KRON isn't a model copied from one product to the next. It's our own base of models, training code and data that each product draws from, at the size the hardware it runs on allows.",
+        points: [
+          {
+            title: "One API, separate models",
+            desc: "Each capability is exposed on its own (/v1/asr, /v1/nlp, /v1/pipeline). A product only calls what it uses, and improving one model doesn't mean touching the others.",
+          },
+          {
+            title: "It runs where the data is",
+            desc: "In Waive, KRON starts as a local process alongside the desktop app, with a fresh port and session token on every launch. In FARO, inference runs on the network's own devices, offline.",
+          },
+          {
+            title: "The hardware decides the size",
+            desc: "Waive uses the full PyTorch models. FARO uses a compact classifier derived from KRON, around 650 KB with pure-Python inference, because it has to answer instantly on modest machines with no network.",
+          },
+        ],
+        productsLabel: "Where it runs today",
         products: [
           {
             name: "Waive",
-            status: "In development",
-            desc: "Meetings transcribed, summarised and with tasks extracted, without the audio ever leaving your machine.",
-            uses: ["Speech to text", "Summarisation", "Task extraction"],
+            logo: "/logo-waive.png",
+            role: "Speech to text, summarisation and task extraction",
+            spec: "Full models · PyTorch on local CPU",
             href: "/waive",
-            cta: "See Waive →",
           },
           {
             name: "FARO",
-            status: "Active prototype",
-            desc: "Automatic triage of emergency messages in Spanish and Catalan, working offline.",
-            uses: ["Classification"],
+            logo: "/logo-faro.png",
+            role: "Urgency triage in Spanish and Catalan",
+            spec: "~650 KB · pure Python · < 1 ms per message",
             href: "/faro",
-            cta: "See FARO →",
           },
           {
             name: "Your project",
-            status: "Next",
-            desc: "We build custom software. Every new project starts from KRON instead of starting from zero.",
-            uses: [] as string[],
+            logo: null as string | null,
+            role: "Custom software that starts from what's already trained",
+            spec: "Let's talk about your case",
             href: "/#contacto",
-            cta: "Tell us your idea →",
           },
         ],
       },
