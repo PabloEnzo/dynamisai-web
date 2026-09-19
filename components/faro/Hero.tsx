@@ -1,29 +1,26 @@
 "use client";
+import { useRef } from "react";
+import Image from "next/image";
 import Reveal from "../Reveal";
+import BeamCanvas from "./BeamCanvas";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
 
 export default function FaroHero() {
   const { lang } = useLang();
   const tx = t[lang].faro.hero;
+  const logoRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 bg-white pt-20">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "radial-gradient(circle, #c0d8f0 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-          opacity: 0.4,
-        }}
-      />
       <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-[#fff7ed] to-transparent pointer-events-none" />
+      <BeamCanvas originRef={logoRef} />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 rounded-3xl bg-orange-50 border border-orange-200 flex items-center justify-center text-4xl shadow-sm">
-              🔦
+            <div ref={logoRef} className="w-20 h-20 rounded-3xl overflow-hidden shadow-lg shadow-orange-500/20">
+              <Image src="/logo-faro.png" alt="FARO" width={80} height={80} priority />
             </div>
           </div>
 
