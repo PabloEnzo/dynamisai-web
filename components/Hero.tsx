@@ -1,5 +1,6 @@
 "use client";
 import Reveal from "./Reveal";
+import DotWaveCanvas from "./DotWaveCanvas";
 import { useLang } from "@/contexts/LangContext";
 import { t } from "@/lib/translations";
 
@@ -12,15 +13,8 @@ export default function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 bg-white"
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "radial-gradient(circle, #c0d8f0 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-          opacity: 0.4,
-        }}
-      />
       <div className="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-[#eef5ff] to-transparent pointer-events-none" />
+      <DotWaveCanvas />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
