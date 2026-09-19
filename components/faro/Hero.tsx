@@ -14,13 +14,13 @@ export default function FaroHero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 bg-white pt-20">
       <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-[#fff7ed] to-transparent pointer-events-none" />
-      <BeamCanvas originRef={logoRef} />
+      <BeamCanvas originRef={logoRef} lampAt={0.47} />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <Reveal>
           <div className="flex justify-center mb-6">
             <div ref={logoRef} className="w-20 h-20 rounded-3xl overflow-hidden shadow-lg shadow-orange-500/20">
-              <Image src="/logo-faro.png" alt="FARO" width={80} height={80} priority />
+              <Image src="/logo-faro-oficial.png" alt="FARO" width={80} height={80} priority />
             </div>
           </div>
 

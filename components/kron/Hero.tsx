@@ -63,7 +63,7 @@ export default function KronHero() {
             <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-5">
               {[
                 { href: "/waive", src: "/logo-waive.png", name: "Waive", rounded: "" },
-                { href: "/faro", src: "/logo-faro.png", name: "FARO", rounded: "rounded-lg" },
+                { href: "/faro", src: "/logo-faro-oficial.png", name: "FARO", rounded: "rounded-lg" },
               ].map((p) => (
                 <Link
                   key={p.name}

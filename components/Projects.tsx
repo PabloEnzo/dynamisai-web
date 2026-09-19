@@ -25,7 +25,7 @@ const projectStyles = [
     badgeClass: "bg-orange-50 border-orange-200 text-orange-700",
     dotClass: "bg-orange-400",
     tags: ["Open Source", "LoRa mesh", "IA local", "Emergencias", "NGI Zero"],
-    logo: "/logo-faro.png",
+    logo: "/logo-faro-oficial.png",
     logoClass: "rounded-xl shadow-md shadow-orange-500/20",
     cardClass:
       "bg-white border border-orange-200 shadow-[0_2px_12px_rgba(234,88,12,0.08)] hover:border-[#ea580c] hover:shadow-[0_4px_24px_rgba(234,88,12,0.14)]",

@@ -314,7 +314,7 @@ export const t = {
           },
           {
             name: "FARO",
-            logo: "/logo-faro.png",
+            logo: "/logo-faro-oficial.png",
             role: "Triaje de urgencia en español y catalán",
             spec: "~650 KB · Python puro · < 1 ms por mensaje",
             href: "/faro",
@@ -1103,7 +1103,7 @@ export const t = {
           },
           {
             name: "FARO",
-            logo: "/logo-faro.png",
+            logo: "/logo-faro-oficial.png",
             role: "Urgency triage in Spanish and Catalan",
             spec: "~650 KB · pure Python · < 1 ms per message",
             href: "/faro",
