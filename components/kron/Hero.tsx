@@ -40,7 +40,7 @@ export default function KronHero() {
               {tx.cta1}
             </a>
             <a
-              href="#roadmap"
+              href="#ecosistema"
               className="px-8 py-3.5 rounded-xl border border-[#0055e0]/30 hover:border-[#0055e0] text-[#0055e0] font-semibold text-sm transition-all duration-200 hover:bg-[#eef5ff]"
             >
               {tx.cta2}

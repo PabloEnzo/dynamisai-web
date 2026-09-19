@@ -27,7 +27,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {tx.values.map((v, i) => (
-            <Reveal key={v.title} delay={i * 80}>
+            <Reveal key={v.title} delay={i * 60}>
               <div className="card-white rounded-2xl p-7 group h-full">
                 <h3 className="text-[#0a1628] font-semibold text-lg mb-2 group-hover:text-[#0055e0] transition-colors">
                   {v.title}

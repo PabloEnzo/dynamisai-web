@@ -27,7 +27,7 @@ export default function MeetingScribeFeatures() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {tx.items.map((f, i) => (
-            <Reveal key={f.title} delay={i * 70}>
+            <Reveal key={f.title} delay={i * 60}>
               <div className="card-white rounded-2xl p-7 group h-full">
                 <h3 className="text-[#0a1628] font-semibold text-base mb-2 group-hover:text-[#0055e0] transition-colors">
                   {f.title}

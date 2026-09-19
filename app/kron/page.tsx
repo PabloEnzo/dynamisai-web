@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import KronHero from "@/components/kron/Hero";
+import KronEcosystem from "@/components/kron/Ecosystem";
 import KronPhilosophy from "@/components/kron/Philosophy";
 import KronArchitecture from "@/components/kron/Architecture";
 import KronCurrentState from "@/components/kron/CurrentState";
-import KronRoadmap from "@/components/kron/Roadmap";
 import KronCTA from "@/components/kron/CTA";
 import type { Metadata } from "next";
 
@@ -20,10 +20,10 @@ export default function KronPage() {
       <Navbar />
       <main>
         <KronHero />
-        <KronPhilosophy />
+        <KronEcosystem />
         <KronArchitecture />
+        <KronPhilosophy />
         <KronCurrentState />
-        <KronRoadmap />
         <KronCTA />
       </main>
       <Footer />

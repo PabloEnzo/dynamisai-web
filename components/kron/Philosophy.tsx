@@ -25,7 +25,7 @@ export default function KronPhilosophy() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {tx.reasons.map((r, i) => (
-            <Reveal key={r.title} delay={i * 80}>
+            <Reveal key={r.title} delay={i * 60}>
               <div className="card-white rounded-2xl p-7 group h-full">
                 <h3 className="text-[#0a1628] font-semibold text-base mb-2 group-hover:text-[#0055e0] transition-colors">
                   {r.title}

@@ -27,7 +27,7 @@ export default function MeetingScribeHowItWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {tx.steps.map((s, i) => (
-            <Reveal key={s.step} delay={i * 80}>
+            <Reveal key={s.step} delay={i * 60}>
               <div className="card-white rounded-2xl p-8 flex gap-5 group h-full">
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#0055e0] to-[#00c8d8] flex items-center justify-center text-white font-bold text-sm">
                   {s.step}

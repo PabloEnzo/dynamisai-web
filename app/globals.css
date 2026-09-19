@@ -81,10 +81,79 @@ html {
 /* Scroll reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  filter: blur(6px);
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.reveal-left {
+  transform: translateX(-26px);
+}
+.reveal-right {
+  transform: translateX(26px);
+}
+.reveal-scale {
+  transform: scale(0.97);
+}
+.reveal-none {
+  transform: none;
+}
+
 .reveal-visible {
   opacity: 1;
-  transform: translateY(0);
+  filter: blur(0);
+  transform: none;
+}
+
+/* KRON ecosystem diagram: entry is delayed per element via --d, hover changes are instant. */
+.eco-line-v,
+.eco-line-h {
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    background-color 0.3s ease;
+}
+.eco-line-v {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.eco-line-h {
+  transform: scaleX(0);
+  transform-origin: center;
+}
+.eco-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.reveal-visible .eco-line-v,
+.reveal-visible .eco-line-h,
+.reveal-visible .eco-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* Users who ask their system to reduce motion get the content, not the movement. */
+@media (prefers-reduced-motion: reduce) {
+  .eco-line-v,
+  .eco-line-h,
+  .eco-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms !important;
+  }
 }

@@ -35,7 +35,7 @@ export default function FaroProblem() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {tx.incidents.map((inc, i) => (
-            <Reveal key={inc.name} delay={i * 100}>
+            <Reveal key={inc.name} delay={i * 60}>
               <div className="bg-white rounded-2xl border border-[#e0eaf8] p-6 h-full flex flex-col">
                 <div className="flex items-center gap-2 mb-4">
                   <span className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${incidentColors[i]}`}>

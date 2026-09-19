@@ -30,7 +30,7 @@ export default function Team() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
           {tx.members.map((member, i) => (
-            <Reveal key={member.name} delay={i * 100}>
+            <Reveal key={member.name} delay={i * 60}>
               <div className="card-white rounded-2xl p-7 flex flex-col gap-5">
                 <div className={`w-16 h-16 rounded-2xl border-2 flex items-center justify-center text-xl font-bold ${avatarColors[i]}`}>
                   {member.initials}

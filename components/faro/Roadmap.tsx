@@ -43,7 +43,7 @@ export default function FaroRoadmap() {
             {tx.phases.map((phase, i) => {
               const style = phaseStyles[i];
               return (
-                <Reveal key={phase.num} delay={i * 100}>
+                <Reveal key={phase.num} delay={i * 60}>
                   <div className="relative flex gap-6 items-start">
                     <div className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${style.numColor} shadow-sm`}>
                       {style.done ? "✓" : phase.num}

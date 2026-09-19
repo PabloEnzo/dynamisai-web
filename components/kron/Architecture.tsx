@@ -50,7 +50,7 @@ export default function KronArchitecture() {
           {tx.models.map((m, i) => {
             const style = modelStyles[i];
             return (
-              <Reveal key={m.name} delay={i * 100}>
+              <Reveal key={m.name} delay={i * 60}>
                 <div
                   className="rounded-2xl border p-6 hover:shadow-lg transition-shadow duration-300 h-full"
                   style={{ borderColor: style.borderColor, backgroundColor: style.lightColor }}

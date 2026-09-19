@@ -40,7 +40,7 @@ export default function FaroFeatures() {
           {tx.items.map((f, i) => {
             const style = featureStyles[i];
             return (
-              <Reveal key={f.title} delay={i * 80}>
+              <Reveal key={f.title} delay={i * 60}>
                 <div className="bg-white rounded-2xl border border-[#e0eaf8] p-6 h-full flex flex-col hover:border-orange-200 transition-colors">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-11 h-11 rounded-xl border flex items-center justify-center text-xs font-bold shrink-0 ${style.bg} ${style.border} ${style.textColor}`}>

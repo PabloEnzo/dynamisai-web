@@ -8,7 +8,7 @@ export default function KronCurrentState() {
   const tx = t[lang].kron.currentState;
 
   return (
-    <section className="py-28 px-6 bg-[#f4f8ff]">
+    <section className="py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <div className="max-w-2xl mb-16">
@@ -75,27 +75,6 @@ export default function KronCurrentState() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal delay={100}>
-          <div className="mt-10 card-white rounded-2xl p-7">
-            <div className="flex items-center justify-between mb-3">
-              <p className="text-sm font-semibold text-[#0a1628]">{tx.progress.label}</p>
-              <span className="text-sm font-bold text-[#0055e0]">~90%</span>
-            </div>
-            <div className="w-full h-2.5 bg-[#e0eaf8] rounded-full overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-[#0055e0] to-[#00c8d8]"
-                style={{ width: "90%" }}
-              />
-            </div>
-            <div className="flex justify-between mt-2">
-              <span className="text-xs text-[#059669] font-medium">{tx.progress.arch}</span>
-              <span className="text-xs text-[#059669] font-medium">{tx.progress.data}</span>
-              <span className="text-xs text-[#059669] font-medium">{tx.progress.training}</span>
-              <span className="text-xs text-[#059669] font-medium">{tx.progress.integration}</span>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

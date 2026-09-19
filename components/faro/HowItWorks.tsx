@@ -39,7 +39,7 @@ export default function FaroHowItWorks() {
 
           <div className="flex flex-col gap-10">
             {tx.steps.map((step, i) => (
-              <Reveal key={step.num} delay={i * 120}>
+              <Reveal key={step.num} delay={i * 60}>
                 <div className="relative flex gap-8 items-start">
                   <div className={`relative z-10 w-16 h-16 rounded-2xl border-2 flex items-center justify-center text-xl font-bold shrink-0 ${stepAccents[i]}`}>
                     {step.num}
