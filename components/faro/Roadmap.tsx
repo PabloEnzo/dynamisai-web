@@ -6,10 +6,10 @@ import { t } from "@/lib/translations";
 const phaseStyles = [
   { color: "border-emerald-400 bg-emerald-50", numColor: "bg-emerald-500 text-white", done: true },
   { color: "border-orange-400 bg-orange-50", numColor: "bg-orange-500 text-white", done: false },
-  { color: "border-[#b8d0f0] bg-[#f4f8ff]", numColor: "bg-[#0055e0] text-white", done: false },
-  { color: "border-[#b8d0f0] bg-[#f4f8ff]", numColor: "bg-[#0055e0] text-white", done: false },
-  { color: "border-[#b8d0f0] bg-[#f4f8ff]", numColor: "bg-[#0055e0] text-white", done: false },
-  { color: "border-[#b8d0f0] bg-[#f4f8ff]", numColor: "bg-[#4a6080] text-white", done: false },
+  { color: "border-orange-200 bg-white", numColor: "bg-orange-300 text-white", done: false },
+  { color: "border-orange-200 bg-white", numColor: "bg-orange-300 text-white", done: false },
+  { color: "border-orange-200 bg-white", numColor: "bg-orange-300 text-white", done: false },
+  { color: "border-orange-100 bg-white", numColor: "bg-orange-100 text-orange-600", done: false },
 ];
 
 export default function FaroRoadmap() {
