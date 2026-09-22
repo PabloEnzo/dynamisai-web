@@ -114,16 +114,20 @@ export const t = {
     team: {
       eyebrow: "Equipo",
       title: ["Quién está detrás de ", "DynamisAI"] as [string, string],
-      description:
-        "DynamisAI la dirige su fundador, que diseña, desarrolla y trata directamente con cada cliente. Hablas con la persona que construye tu proyecto, sin intermediarios.",
       members: [
         {
           name: "Pablo Enzo Velarde Bagnoli",
           role: "Fundador & CEO",
-          bio: "Desarrollador e investigador en IA. Diseña la arquitectura, entrena los modelos y construye los productos de DynamisAI, y es el interlocutor directo de cada cliente e institución: desde la primera reunión hasta la entrega.",
-          initials: "PV",
         },
       ],
+      cta: "Hablemos →",
+      story: {
+        paragraphs: [
+          "DynamisAI nace en 2025 de una idea sencilla: que usar software con inteligencia artificial no obligue a ceder tus datos ni a depender de nadie.",
+          "Casi todo lo que hoy se vende «con IA» alquila la de un tercero. Se paga por cada llamada, los límites los pone el proveedor y las conversaciones de tus clientes acaban en servidores ajenos. Esa dependencia condiciona el precio, el producto y la privacidad, y no se puede arreglar desde fuera.",
+          "La alternativa fue construir el motor propio: KRON, entrenado desde cero en nuestro hardware. De ahí salieron Waive y FARO, y sobre esa misma base desarrollamos hoy los proyectos a medida de cada cliente.",
+        ],
+      },
     },
     kron: {
       hero: {
@@ -903,16 +907,20 @@ export const t = {
     team: {
       eyebrow: "Team",
       title: ["Who's behind ", "DynamisAI"] as [string, string],
-      description:
-        "DynamisAI is run by its founder, who designs, builds and deals directly with every client. You talk to the person who builds your project, with no middlemen.",
       members: [
         {
           name: "Pablo Enzo Velarde Bagnoli",
           role: "Founder & CEO",
-          bio: "Software developer and AI researcher. Designs the architecture, trains the models and builds DynamisAI's products, and is the direct point of contact for every client and institution, from the first meeting to delivery.",
-          initials: "PV",
         },
       ],
+      cta: "Let's talk →",
+      story: {
+        paragraphs: [
+          "DynamisAI started in 2025 from a simple idea: using software with artificial intelligence shouldn't mean handing over your data or depending on anyone.",
+          "Almost everything sold today as \"AI-powered\" rents someone else's AI. You pay per call, the provider sets the limits, and your clients' conversations end up on servers you don't control. That dependency shapes the price, the product and the privacy, and it can't be fixed from the outside.",
+          "The alternative was to build our own engine: KRON, trained from scratch on our own hardware. Waive and FARO came out of it, and it's the same foundation we build each client's custom project on today.",
+        ],
+      },
     },
     kron: {
       hero: {
