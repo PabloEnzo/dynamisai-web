@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Where notifications land. Set CONTACT_TO to reroute without touching DNS.
+const TO = process.env.CONTACT_TO || "consulting@dynamisai.es";
+
 // Simple in-memory rate limiter (best-effort; resets per serverless instance)
 const rateMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 3;
@@ -80,7 +83,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "DynamisAI Web <consulting@dynamisai.es>",
-      to: "consulting@dynamisai.es",
+      to: TO,
       replyTo: email,
       subject: `[Web] ${safeSubject}`,
       html: `

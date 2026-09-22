@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Where notifications land. Set CONTACT_TO to reroute without touching DNS.
+const TO = process.env.CONTACT_TO || "consulting@dynamisai.es";
+
 const rateMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 60_000;
@@ -72,7 +75,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "DynamisAI Web <consulting@dynamisai.es>",
-      to: "consulting@dynamisai.es",
+      to: TO,
       subject: `[Waitlist] ${safeProduct}: ${safeEmail}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
